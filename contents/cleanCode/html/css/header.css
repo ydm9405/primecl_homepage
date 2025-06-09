@@ -1,0 +1,32 @@
+#fs-header {
+    top:0px;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.mainTitle{
+    font-size:28px;
+    padding:20px 0;
+}
+
+.headerTitle {
+    font-size:28px;
+    padding: 25px 15px;
+    width: calc(100% - 30px);
+    max-width: 1890px;
+    font-family: "NotoSansKR-Bold";
+}
+
+#pageHeader {
+    float: left;
+}
+
+#logo {
+    float: right;
+}
+
+.logo_img {
+    width: 50px;
+    margin: 5px 25px 5px 0px;
+    cursor: pointer;
+}
