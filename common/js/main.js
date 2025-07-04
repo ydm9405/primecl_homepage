@@ -263,6 +263,7 @@ function setCompanyPage() {
     </main>
   `;
   replaceContent(html);
+  renderBottomBanner();
 }
 
 function setContentsServicePage() {
@@ -274,6 +275,7 @@ function setContentsServicePage() {
     </main>
   `;
   replaceContent(html);
+  renderBottomBanner();
 }
 
 function setContentsCreationPage() {
@@ -301,6 +303,19 @@ function setContentsCreationPage() {
     </main>
   `;
   replaceContent(html);
+  renderBottomBanner();
+}
+
+function setContentsStudioPage() {
+  const html = `
+    <main>
+      <section style="padding: 100px 40px;">
+        <h1>Contents Studio</h1>
+      </section>
+    </main>
+  `;
+  replaceContent(html);
+  renderBottomBanner();
 }
 
 function generateCourseCards(dataList) {
@@ -324,15 +339,4 @@ function generateCourseCards(dataList) {
       `
     )
     .join("");
-}
-
-function setContentsStudioPage() {
-  const html = `
-    <main>
-      <section style="padding: 100px 40px;">
-        <h1>Contents Studio</h1>
-      </section>
-    </main>
-  `;
-  replaceContent(html);
 }

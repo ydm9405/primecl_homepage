@@ -27,12 +27,14 @@ const cssList = [
     "./common/css/font.css",
     "./common/css/header.css",
     "./common/css/main.css",
+    "./common/css/bottom.css",
 ];
 
 const jsList = [
     "./common/js/intro.js",
     "./common/js/header.js",
     "./common/js/main.js",
+    "./common/js/bottom.js",
     "./common/js/ui.js",
 ];
 
