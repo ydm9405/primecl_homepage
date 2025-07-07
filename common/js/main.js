@@ -239,6 +239,8 @@ function replaceContent(html) {
   document.body.insertAdjacentHTML("beforeend", html);
 }
 function setMainPage() {
+  const oldFooter = document.querySelector("footer");
+  if (oldFooter) oldFooter.remove();
   const contentHTML = `
     <main>
       <section style="position: relative; width: 100vw; height: calc(100vh - 104px); overflow: hidden;">
@@ -281,15 +283,26 @@ function setContentsServicePage() {
 function setContentsCreationPage() {
   const html = `
     <main>
+      <nav class="category-nav">
+        <ul class="timeline">
+          <li class="active"><a href="#category-leadership">리더십</a></li>
+          <li><a href="#category-it">IT</a></li>
+          <li><a href="#category-workManagement">업무관리</a></li>
+          <li><a href="#category-liberalArts">인문교양</a></li>
+          <li><a href="#category-selfDevelopment">자기계발</a></li>
+          <li><a href="#category-selfManagement">자기관리</a></li>
+          <li><a href="#category-organizationalManagement">조직관리</a></li>
+        </ul>
+      </nav>
       <section class="contents-creation">
         <h2>자체과정 콘텐츠 부문
           <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="메인타이틀이미지">
         </h2>
         ${contentsCategory
-          .map((cat) => {
-            const cards = generateCourseCards(contentsData[cat.key] || []);
-            return `
-              <div class="category">
+      .map((cat) => {
+        const cards = generateCourseCards(contentsData[cat.key] || []);
+        return `
+              <div class="category" id="category-${cat.key}">
                 <h3>
                   <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
                   ${cat.name}
@@ -297,13 +310,37 @@ function setContentsCreationPage() {
                 <div class="card-grid">${cards}</div>
               </div>
             `;
-          })
-          .join("")}
+      })
+      .join("")}
       </section>
     </main>
   `;
   replaceContent(html);
   renderBottomBanner();
+  // 카테고리 네비게이션 클릭 시 부드럽게 스크롤
+  document.addEventListener("click", function (e) {
+    const target = e.target.closest("a[href^='#category-']");
+    if (!target) return;
+
+    e.preventDefault();
+
+    const headerHeight = 110;
+    const id = target.getAttribute("href");
+    const section = document.querySelector(id);
+    if (!section) return;
+
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+    const scrollTo = sectionTop - headerHeight;
+
+    window.scrollTo({
+      top: scrollTo,
+      behavior: "smooth"
+    });
+
+    // active 클래스 제어
+    document.querySelectorAll(".timeline li").forEach(li => li.classList.remove("active"));
+    target.closest("li").classList.add("active");
+  });
 }
 
 function setContentsStudioPage() {

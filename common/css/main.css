@@ -125,9 +125,9 @@ main {
 /* Contact Us 버튼 */
 .contact-btn button {
     padding: 8px 20px;
-    border: 2px solid #13256b;
+    border: 2px solid #253485;
     background: #f9f9f9;
-    color: #13256b;
+    color: #253485;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
@@ -193,7 +193,7 @@ main {
     font-weight: 500;
     font-size: 34px;
     color: #253485;
-    margin-left: 60px;
+    margin-left: 164px;
 }
 
 .category .icon {
@@ -208,12 +208,12 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     justify-content: center;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 110px;
 }
 
 .course-card {
     text-align: center;
-    width: 506px;
+    width: 420px;
     margin: 0 auto;
     margin-bottom: 80px;
 }
@@ -246,7 +246,7 @@ main {
     padding-top: 8px;
     padding-bottom: 6px;
     border: none;
-    background: #1c3d80;
+    background: #253485;
     color: white;
     border-radius: 7px;
     cursor: pointer;
@@ -254,4 +254,83 @@ main {
     font-family: 'pretendard';
     font-weight: 800;
     font-size: 17px;
+}
+
+.category-nav {
+  position: fixed;
+  top: 350px;
+  left: 60px;
+  z-index: 1000;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -22px;
+  width: 2px;
+  height: 100%;
+  background: #ddd;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline li a {
+  display: flex; 
+  align-items: center;
+  padding-left: 40px;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative; 
+}
+
+.timeline li a::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 4px solid #ccc;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1; /* 클릭 가능 */
+}
+
+.timeline li.active::before {
+  border-color: #253485;
+}
+
+.timeline li.active a::before {
+  border-color: #253485;
+}
+
+.timeline li a {
+  display: block; /* ✅ li 전체 영역 클릭 가능 */
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 4px 0;
+}
+
+.timeline li a:hover {
+  color: #253485;
+}
+
+.timeline li a:hover::before {
+  border-color: #253485;
 }
