@@ -73,6 +73,7 @@ function setHeader() {
           break;
         case "Contents Creation":
           setContentsCreationPage();
+          observeFadeUp();
           break;
         case "Studio":
           setContentsStudioPage();

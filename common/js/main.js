@@ -99,7 +99,7 @@ const contentsData = {
       previewLink: "https://vimeo.com/987654321"
     },
     {
-      title: "챗 GPT로 만드는 주식&암호화폐 자동매매 시스템",
+      title: "챗 GPT로 만드는 주식&<br>암호화폐 자동매매 시스템",
       image: "./common/img/contentsCreation/cryptocurrency.png",
       materialLink: "./common/down/cryptocurrency.zip",
       previewLink: "https://vimeo.com/987654321"
@@ -150,7 +150,7 @@ const contentsData = {
       previewLink: "https://vimeo.com/123456789"
     },
     {
-      title: "신규 입사자의 온보딩 과정, 워(Work).플(People).킹(Networking)",
+      title: "신규 입사자의 온보딩 과정,<br>워(Work).플(People).킹(Networking)",
       image: "./common/img/contentsCreation/onboarding.png",
       materialLink: "./common/down/onboarding.zip",
       previewLink: "https://vimeo.com/123456789"
@@ -233,8 +233,6 @@ function replaceContent(html) {
   document.body.insertAdjacentHTML("beforeend", html);
 }
 function setMainPage() {
-  const oldFooter = document.querySelector("footer");
-  if (oldFooter) oldFooter.remove();
   const contentHTML = `
     <main>
       <section style="position: relative; width: 100vw; height: calc(100vh - 104px); overflow: hidden;">
@@ -296,10 +294,11 @@ function setContentsCreationPage() {
       .map((cat) => {
         const cards = generateCourseCards(contentsData[cat.key] || []);
         return `
-              <div class="category" id="category-${cat.key}">
+              <div class="category fade-up" id="category-${cat.key}">
                 <h3>
                   <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
                   ${cat.name}
+                  <div class="line"></div>
                 </h3>
                 <div class="card-grid">${cards}</div>
               </div>
@@ -334,6 +333,31 @@ function setContentsCreationPage() {
     // active 클래스 제어
     document.querySelectorAll(".timeline li").forEach(li => li.classList.remove("active"));
     target.closest("li").classList.add("active");
+  });
+
+
+  window.addEventListener("scroll", function () {
+    const headerHeight = 110;
+    const sections = document.querySelectorAll("[id^='category-']");
+
+    let currentId = null;
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const offsetTop = rect.top;
+
+      if (offsetTop <= headerHeight + 10 && offsetTop + rect.height > headerHeight + 10) {
+        currentId = "#" + section.id;
+      }
+    });
+
+    if (currentId) {
+      document.querySelectorAll(".timeline li").forEach(li => li.classList.remove("active"));
+      const activeLink = document.querySelector(`.timeline li a[href='${currentId}']`);
+      if (activeLink) {
+        activeLink.closest("li").classList.add("active");
+      }
+    }
   });
 }
 
@@ -370,4 +394,20 @@ function generateCourseCards(dataList) {
       `
     )
     .join("");
+}
+
+function observeFadeUp() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible'); // ❗스크롤 영역 벗어나면 다시 숨김
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
 }
