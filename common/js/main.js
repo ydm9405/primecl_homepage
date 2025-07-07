@@ -159,12 +159,6 @@ const contentsData = {
   //인문교양
   liberalArts: [
     {
-      title: "만화 박시백의 고려사에서 배우는 리더십",
-      image: "./common/img/contentsCreation/koryosa.png",
-      materialLink: "./common/down/koryosa.zip",
-      previewLink: "https://vimeo.com/123456789"
-    },
-    {
       title: "명욱교수와 함께 떠나는 술기로운 세계사",
       image: "./common/img/contentsCreation/boozehistory.png",
       materialLink: "./common/down/boozehistory.zip",
