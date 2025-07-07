@@ -32,13 +32,13 @@
     position: fixed;
     bottom: 200px;
     right: 100px;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
     z-index: 9999;
     display: none;
     justify-content: center;
     align-items: center;
     background: url(../img/bottom/bottom_scroll.png) no-repeat;
-    background-size: 65px 65px;
+    background-size: 60px 60px;
 }
