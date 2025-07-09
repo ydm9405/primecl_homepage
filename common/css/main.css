@@ -135,10 +135,6 @@ main {
     cursor: pointer;
 }
 
-.logo_img {
-    min-width: 246px;
-}
-
 .mapWrap {
     position: fixed;
     top: 0;
