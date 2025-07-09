@@ -45,19 +45,19 @@ const contentsData = {
       title: "일잘러의 멘탈관리 수업 - 회복탄력성",
       image: "./common/img/contentsCreation/resilience.png",
       materialLink: "./common/down/resilience.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099890425"
     },
     {
       title: "슬기로운 갈등 관리",
       image: "./common/img/contentsCreation/mediation.png",
       materialLink: "./common/down/mediation.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099883106"
     },
     {
       title: "개인과 조직의 성장을 이끄는 밀레니얼 워커십",
       image: "./common/img/contentsCreation/millennial.png",
       materialLink: "./common/down/millennial.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099881049"
     },
   ],
   //IT
@@ -66,55 +66,55 @@ const contentsData = {
       title: "처음 배우는 생성형AI 프로그램개발(LLM)",
       image: "./common/img/contentsCreation/LLM.png",
       materialLink: "./common/down/LLM.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099891617"
     },
     {
       title: "처음 배우는 쿠버네티스 개발 전략",
       image: "./common/img/contentsCreation/kubernetes.png",
       materialLink: "./common/down/kubernetes.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099891525"
     },
     {
       title: "처음 배우는 리액트",
       image: "./common/img/contentsCreation/react.png",
       materialLink: "./common/down/react.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099891551"
     },
     {
       title: "전혀 다른 생성형 AI",
       image: "./common/img/contentsCreation/ai.png",
       materialLink: "./common/down/ai.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099891176"
     },
     {
       title: "처음 배우는 클린코드 With 파이썬",
       image: "./common/img/contentsCreation/cleanCode.png",
       materialLink: "./common/down/cleanCode.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099882971"
     },
     {
       title: "AI시대, 일잘러를 위한 데이터 사고와 분석법",
       image: "./common/img/contentsCreation/data.png",
       materialLink: "./common/down/data.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099882017"
     },
     {
       title: "챗 GPT로 만드는 주식&<br>암호화폐 자동매매 시스템",
       image: "./common/img/contentsCreation/cryptocurrency.png",
       materialLink: "./common/down/cryptocurrency.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099882133"
     },
     {
       title: "누구나 쉽게 배우는 도커 기초 및 활용법",
       image: "./common/img/contentsCreation/docker.png",
       materialLink: "./common/down/docker.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099882852"
     },
     {
       title: "모두를 위한 AI 데이터 시각화 수업",
       image: "./common/img/contentsCreation/dataVisualization.png",
       materialLink: "./common/down/dataVisualization.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099880673"
     },
     {
       title: "누구나 쉽게 배우는 NoSQL-Mongo DB",
@@ -129,31 +129,31 @@ const contentsData = {
       title: "10분만에 AI 활용법",
       image: "./common/img/contentsCreation/aiQuickstart.png",
       materialLink: "./common/down/aiQuickstart.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099882065"
     },
     {
       title: "스마트 워크로 워크 스마트하기",
       image: "./common/img/contentsCreation/smartWork.png",
       materialLink: "./common/down/smartWork.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099882304"
     },
     {
       title: "일잘러의 창의적 문제 해결 방법",
       image: "./common/img/contentsCreation/creativity.png",
       materialLink: "./common/down/creativity.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099883069"
     },
     {
       title: "일잘러의 비즈니스 매너",
       image: "./common/img/contentsCreation/etiquette.png",
       materialLink: "./common/down/etiquette.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099880723"
     },
     {
       title: "신규 입사자의 온보딩 과정,<br>워(Work).플(People).킹(Networking)",
       image: "./common/img/contentsCreation/onboarding.png",
       materialLink: "./common/down/onboarding.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099881458"
     },
   ],
   //인문교양
@@ -162,31 +162,31 @@ const contentsData = {
       title: "명욱교수와 함께 떠나는 술기로운 세계사",
       image: "./common/img/contentsCreation/boozehistory.png",
       materialLink: "./common/down/boozehistory.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099891577"
     },
     {
       title: "직장인을 위한 인생 특강 - 니체",
       image: "./common/img/contentsCreation/nietzsche.png",
       materialLink: "./common/down/nietzsche.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099891647"
     },
     {
       title: "직장인을 위한 인생 수업 - 그리스로마신화",
       image: "./common/img/contentsCreation/mythology.png",
       materialLink: "./common/down/mythology.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099882040"
     },
     {
       title: "승리하는 사람들의 인생 바이블, 손자병법",
       image: "./common/img/contentsCreation/strategy.png",
       materialLink: "./common/down/strategy.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099881210"
     },
     {
       title: "직장인을 위한 인생 특강 - 한비자",
       image: "./common/img/contentsCreation/hanfei.png",
       materialLink: "./common/down/hanfei.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099880864"
     },
   ],
   //자기계발
@@ -195,13 +195,13 @@ const contentsData = {
       title: "일잘러의 생각정리 기술-비주얼씽킹&마인드맵",
       image: "./common/img/contentsCreation/visual.png",
       materialLink: "./common/down/visual.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099891485"
     },
     {
       title: "일잘러를 위한 Reading & Writing 기술",
       image: "./common/img/contentsCreation/reading.png",
       materialLink: "./common/down/reading.zip",
-      previewLink: "https://vimeo.com/987654321"
+      previewLink: "https://player.vimeo.com/video/1099891347"
     },
   ],
   //자기관리
@@ -210,7 +210,7 @@ const contentsData = {
       title: "일잘러들의 성공 키워드 - 행동력 수업",
       image: "./common/img/contentsCreation/agency.png",
       materialLink: "./common/down/agency.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099890601"
     },
   ],
   //조직관리
@@ -219,7 +219,7 @@ const contentsData = {
       title: "개인과 조직의 성장을 이끄는 힘, 멘토링 바이블",
       image: "./common/img/contentsCreation/mentoring.png",
       materialLink: "./common/down/mentoring.zip",
-      previewLink: "https://vimeo.com/123456789"
+      previewLink: "https://player.vimeo.com/video/1099881613"
     },
   ],
 };
@@ -448,14 +448,40 @@ function generateCourseCards(dataList) {
             <a href="${item.materialLink}" download>
               <button>과정 소개자료</button>
             </a>
-            <a href="${item.previewLink}" target="_blank">
-              <button>맛보기 영상</button>
-            </a>
+            <button onclick="openPreviewModal('${item.previewLink}')">맛보기 영상</button>
           </div>
         </div>
       `
     )
     .join("");
+}
+
+function openPreviewModal(link) {
+  // 이미 모달이 있으면 제거
+  const old = document.getElementById("previewModal");
+  if (old) old.remove();
+
+  // 모달 요소 생성
+  const modal = document.createElement("div");
+  modal.id = "previewModal";
+  modal.style = `
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.8);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 9999;
+  `;
+  modal.innerHTML = `
+    <div style="position: relative; width: 80vw; max-width: 960px; aspect-ratio: 16/9;">
+      <iframe src="${link}" 
+              style="width: 100%; height: 100%; border: none;" 
+              allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <button onclick="document.getElementById('previewModal').remove()" 
+              style="position: absolute; top: -40px; right: 0; background: none; border: none; font-size: 30px; color: white; cursor: pointer;">×</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
 }
 
 function observeFadeUp() {
