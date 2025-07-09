@@ -1,10 +1,8 @@
-/*body*/
 body:not(.loaded) main,
 body:not(.loaded) .site-header {
     display: none;
 }
 
-/* 인트로 영상 */
 .intro-fullscreen {
     position: fixed;
     z-index: 9999;
@@ -19,7 +17,6 @@ body:not(.loaded) .site-header {
     object-fit: cover;
 }
 
-/* 헤더 영역 */
 .site-header {
     position: fixed;
     top: 0;
@@ -122,7 +119,6 @@ main {
     transform: translateX(-50%) scaleX(1);
 }
 
-/* Contact Us 버튼 */
 .contact-btn button {
     padding: 8px 20px;
     border: 2px solid #13256b;

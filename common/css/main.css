@@ -1,10 +1,8 @@
-/*body*/
 body:not(.loaded) main,
 body:not(.loaded) .site-header {
     display: none;
 }
 
-/* 인트로 영상 */
 .intro-fullscreen {
     position: fixed;
     z-index: 9999;
@@ -19,7 +17,6 @@ body:not(.loaded) .site-header {
     object-fit: cover;
 }
 
-/* 헤더 영역 */
 .site-header {
     position: fixed;
     top: 0;
@@ -122,7 +119,6 @@ main {
     transform: translateX(-50%) scaleX(1);
 }
 
-/* Contact Us 버튼 */
 .contact-btn button {
     padding: 8px 20px;
     border: 2px solid #253485;
@@ -268,7 +264,7 @@ main {
 
 .category-nav {
     position: fixed;
-    top: 350px;
+    top: 270px;
     left: 60px;
     z-index: 1000;
 }
@@ -318,7 +314,6 @@ main {
     border-radius: 50%;
     background: #fff;
     z-index: 1;
-    /* 클릭 가능 */
 }
 
 .timeline li.active::before {
@@ -331,7 +326,6 @@ main {
 
 .timeline li a {
     display: block;
-    /* ✅ li 전체 영역 클릭 가능 */
     text-decoration: none;
     color: #222;
     font-weight: bold;
@@ -348,13 +342,43 @@ main {
 }
 
 .fade-up {
-  opacity: 0;
-  filter: blur(2px);
-  transition: opacity 0.6s ease, filter 0.6s ease;
-  will-change: filter, opacity;
+    opacity: 0;
+    filter: blur(1px);
+    transition: opacity 0.6s ease, filter 0.6s ease;
+    will-change: filter, opacity;
 }
 
 .fade-up.visible {
-  opacity: 1;
-  filter: blur(0);
+    opacity: 1;
+    filter: blur(0);
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.logo-motion {
+    width: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 2;
+}
+
+.logo-motion.show {
+    opacity: 1;
+    animation: pulse 2s ease-in-out infinite;
 }
