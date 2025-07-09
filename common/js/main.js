@@ -225,46 +225,81 @@ const contentsData = {
 };
 
 function replaceContent(html) {
-  const oldMain = document.querySelector("main");
-  if (oldMain) oldMain.remove();
+  document.querySelectorAll("main").forEach((el) => {
+    if (el.id !== "mainPage") el.remove();
+  });
 
   const oldFooter = document.querySelector("footer");
   if (oldFooter) oldFooter.remove();
 
   document.body.insertAdjacentHTML("beforeend", html);
 }
-function setMainPage() {
-  const contentHTML = `
-    <main>
-      <section style="position: relative; width: 100vw; height: calc(100vh - 104px); overflow: hidden;">
-        
-        <!-- 🔸 로고: main.mp4 로딩 전 표시 -->
-        <div id="mainLogoMotion" class="logo-motion">
-          <img src="./common/img/header/logo_icon.png" alt="회사 로고" />
-        </div>
 
-        <!-- 🔸 main.mp4: 로딩 느릴 수 있음 -->
-        <video id="mainVideo" autoplay muted loop playsinline
-          style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
-          <source src="https://video-workers.ydm9405.workers.dev/main.mp4" type="video/mp4" />
-        </video>
+function createMainVideoSection() {
+  if (document.getElementById("mainVideoWrapper")) return;
 
-      </section>
-    </main>
+  const section = document.createElement("section");
+  section.id = "mainVideoWrapper";
+  section.style = "position: relative; width: 100vw; height: calc(100vh - 104px); overflow: hidden;";
+  section.innerHTML = `
+    <div id="mainLogoMotion" class="logo-motion">
+      <img src="./common/img/header/logo_icon.png" alt="회사 로고" />
+    </div>
+    <video id="mainVideo" autoplay muted loop playsinline
+      style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
+      <source src="https://video-workers.ydm9405.workers.dev/main.mp4" type="video/mp4" />
+    </video>
   `;
 
-  replaceContent(contentHTML);
+  const main = document.createElement("main");
+  main.id = "mainPage";
+  main.style.display = "block"; // ✅ 항상 보이게
+  main.appendChild(section);
+  document.body.appendChild(main);
 
   const video = document.getElementById("mainVideo");
   const logo = document.getElementById("mainLogoMotion");
 
-  // 로딩 직후 로고 보여주기
-  logo.classList.add("show");
+  if (!document.body.classList.contains("mainLogoShown")) {
+    logo.classList.add("show");
+    video.addEventListener("canplaythrough", () => {
+      logo.classList.remove("show");
+      logo.remove();
+      document.body.classList.add("mainLogoShown");
+    });
+  } else {
+    logo.remove(); // 이미 보여줬으면 제거
+  }
+}
 
-  video.addEventListener("canplaythrough", () => {
-    logo.classList.remove("show");
-    logo.remove(); // ✅ 즉시 제거
+function setMainPage() {
+  // 모든 다른 main 숨기기
+  document.querySelectorAll("main").forEach((el) => {
+    if (el.id !== "mainPage") el.style.display = "none";
   });
+
+  const main = document.getElementById("mainPage");
+  const video = document.getElementById("mainVideo");
+
+  if (main) main.style.display = "block";
+  if (video) {
+    video.style.display = "block"; // ✅ 다시 보이게
+    if (video.paused) video.play().catch(() => {});
+  }
+
+  const footer = document.querySelector("footer");
+  if (footer) footer.remove();
+}
+
+function hideMainPage() {
+  const main = document.getElementById("mainPage");
+  const video = document.getElementById("mainVideo");
+
+  if (main) main.style.display = "none";
+  if (video) {
+    video.pause();
+    video.style.display = "none"; // ✅ 영상 요소 자체도 숨김
+  }
 }
 
 function setCompanyPage() {
@@ -275,8 +310,14 @@ function setCompanyPage() {
       </section>
     </main>
   `;
+  hideMainPage();
   replaceContent(html);
   renderBottomBanner();
+
+  const mvw = document.getElementById("mainVideoWrapper");
+  if (mvw && mvw.parentElement) {
+    mvw.parentElement.style.display = "none";
+  }
 }
 
 function setContentsServicePage() {
@@ -287,6 +328,7 @@ function setContentsServicePage() {
       </section>
     </main>
   `;
+  hideMainPage();
   replaceContent(html);
   renderBottomBanner();
 }
@@ -327,6 +369,7 @@ function setContentsCreationPage() {
       </section>
     </main>
   `;
+  hideMainPage();
   replaceContent(html);
   renderBottomBanner();
   document.addEventListener("click", function (e) {
@@ -376,6 +419,7 @@ function setContentsCreationPage() {
       }
     }
   });
+  observeFadeUp();
 }
 
 function setContentsStudioPage() {
@@ -386,6 +430,7 @@ function setContentsStudioPage() {
       </section>
     </main>
   `;
+  hideMainPage();
   replaceContent(html);
   renderBottomBanner();
 }
