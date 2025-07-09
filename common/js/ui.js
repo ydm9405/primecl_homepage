@@ -1,11 +1,9 @@
-function initialize() {
-  setIntro();
-  
-  setTimeout(() => {
-    setHeader();
-    setMainPage();
-    document.body.classList.add('loaded');
-  }, 1000);
+async function initialize() {
+  await setIntro(); // 영상이 로딩될 때까지 기다림
+
+  setHeader();
+  setMainPage();
+  document.body.classList.add('loaded');
 
   setTimeout(() => {
     const intro = document.getElementById("intro");
@@ -13,7 +11,7 @@ function initialize() {
       intro.style.transition = "opacity 1s ease";
       intro.style.opacity = 0;
       setTimeout(() => {
-        intro.remove(); // display: none보다 remove가 깔끔
+        intro.remove();
       }, 1000);
     }
   }, 5000);
