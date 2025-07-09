@@ -43,7 +43,6 @@ const jsList = [
         await Promise.all(cssList.map(loadCSS));
         await Promise.all(jsList.map(loadScript));
 
-        // ✅ CSS/JS 모두 로드된 후 initialize 호출
         if (typeof initialize === "function") {
             initialize();
         }

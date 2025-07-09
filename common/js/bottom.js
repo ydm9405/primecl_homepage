@@ -1,6 +1,6 @@
 function renderBottomBanner() {
   const existing = document.querySelector("footer");
-  if (existing) existing.remove(); // 중복 제거
+  if (existing) existing.remove();
 
   const footer = document.createElement("footer");
   footer.className = "site-footer";
@@ -22,12 +22,11 @@ function renderBottomBanner() {
   }
 }
 
-// 버튼 표시 / 숨김
 window.addEventListener("scroll", function () {
   const btn = document.getElementById("scrollTopBtn");
   if (window.scrollY > 300) {
-    btn.style.display = "flex"; // 보여줌
+    btn.style.display = "flex";
   } else {
-    btn.style.display = "none"; // 숨김
+    btn.style.display = "none";
   }
 });

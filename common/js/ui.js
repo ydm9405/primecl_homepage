@@ -1,21 +1,20 @@
 function initialize() {
-  setIntro(); // 인트로 먼저 보여줌
-
+  setIntro();
+  
   setTimeout(() => {
-    // 2.5초 후 본문 요소 추가
     setHeader();
     setMainPage();
-  }, 2500);
+    document.body.classList.add('loaded');
+  }, 1000);
 
   setTimeout(() => {
-    // 3초 후 인트로 제거
     const intro = document.getElementById("intro");
     if (intro) {
       intro.style.transition = "opacity 1s ease";
       intro.style.opacity = 0;
       setTimeout(() => {
-        intro.remove();
+        intro.remove(); // display: none보다 remove가 깔끔
       }, 1000);
     }
-  }, 3000);
+  }, 5000);
 }

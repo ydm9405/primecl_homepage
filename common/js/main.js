@@ -225,27 +225,46 @@ const contentsData = {
 };
 
 function replaceContent(html) {
-  // 기존 콘텐츠 삭제
   const oldMain = document.querySelector("main");
   if (oldMain) oldMain.remove();
 
-  // 새 콘텐츠 삽입
+  const oldFooter = document.querySelector("footer");
+  if (oldFooter) oldFooter.remove();
+
   document.body.insertAdjacentHTML("beforeend", html);
 }
 function setMainPage() {
   const contentHTML = `
     <main>
       <section style="position: relative; width: 100vw; height: calc(100vh - 104px); overflow: hidden;">
+        
+        <!-- 🔸 로고: main.mp4 로딩 전 표시 -->
+        <div id="mainLogoMotion" class="logo-motion">
+          <img src="./common/img/header/logo_icon.png" alt="회사 로고" />
+        </div>
+
+        <!-- 🔸 main.mp4: 로딩 느릴 수 있음 -->
         <video id="mainVideo" autoplay muted loop playsinline
           style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
-          <source src="./mp4/main.mp4" type="video/mp4" />
+          <source src="https://video-workers.ydm9405.workers.dev/main.mp4" type="video/mp4" />
         </video>
-        <div style="position: relative; z-index: 1; color: white; text-align: center; top: 50%; transform: translateY(-50%);">
-        </div>
+
       </section>
     </main>
   `;
+
   replaceContent(contentHTML);
+
+  const video = document.getElementById("mainVideo");
+  const logo = document.getElementById("mainLogoMotion");
+
+  // 로딩 직후 로고 보여주기
+  logo.classList.add("show");
+
+  video.addEventListener("canplaythrough", () => {
+    logo.classList.remove("show");
+    logo.remove(); // ✅ 즉시 제거
+  });
 }
 
 function setCompanyPage() {
@@ -310,7 +329,6 @@ function setContentsCreationPage() {
   `;
   replaceContent(html);
   renderBottomBanner();
-  // 카테고리 네비게이션 클릭 시 부드럽게 스크롤
   document.addEventListener("click", function (e) {
     const target = e.target.closest("a[href^='#category-']");
     if (!target) return;
@@ -330,7 +348,6 @@ function setContentsCreationPage() {
       behavior: "smooth"
     });
 
-    // active 클래스 제어
     document.querySelectorAll(".timeline li").forEach(li => li.classList.remove("active"));
     target.closest("li").classList.add("active");
   });
@@ -402,7 +419,7 @@ function observeFadeUp() {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       } else {
-        entry.target.classList.remove('visible'); // ❗스크롤 영역 벗어나면 다시 숨김
+        entry.target.classList.remove('visible');
       }
     });
   }, {

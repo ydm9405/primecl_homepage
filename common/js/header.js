@@ -1,31 +1,9 @@
-window.addEventListener('load', () => {
-  // 🔹 인트로 영상 페이드아웃
-  const intro = document.getElementById('intro');
-  if (intro) {
-    // ✅ 2.5초 후 본문 먼저 등장
-    setTimeout(() => {
-      document.body.classList.add('loaded');
-    }, 2500);
-
-    // ✅ 3초 후 인트로 페이드아웃
-    setTimeout(() => {
-      intro.style.transition = 'opacity 1s ease';
-      intro.style.opacity = 0;
-
-      // ✅ 1초 뒤 인트로 완전 제거
-      setTimeout(() => {
-        intro.style.display = 'none';
-      }, 1000);
-    }, 3000);
-  }
-});
-
 function setHeader() {
   const headerHTML = `
     <header class="site-header">
         <div class="logo">
           <a href="#" id="logoLink">
-            <img class="logo_img" src="./common/img/header/logo.png" alt="로고 이미지">
+            <img class="logo_img" src="./common/img/header/logo_eng.png" alt="로고 이미지">
           </a>
         </div>
         <nav class="main-nav">
@@ -47,7 +25,7 @@ function setHeader() {
         <button id="scrollToMap" class="map-btn">지도보기</button>
       </header>
     
-      <!-- ✅ 지도 팝업 포함 -->
+      <!-- 지도 팝업 -->
       <div id="mapPopup" class="map-popup">
         <div class="map-popup-content">
           <button id="closeMapPopup" class="close-btn">닫기 ✖</button>
@@ -84,7 +62,6 @@ function setHeader() {
     });
   });
 
-  // 🔹 지도 버튼 이벤트
   const scrollBtn = document.getElementById("scrollToMap");
   const closeBtn = document.getElementById("closeMapPopup");
   const mapPopup = document.getElementById("mapPopup");
@@ -105,6 +82,6 @@ function setHeader() {
     e.preventDefault();
 
     setMainPage();
-    window.scrollTo({ top: 0, behavior: "smooth" }); // ✅ 맨 위로 이동
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
