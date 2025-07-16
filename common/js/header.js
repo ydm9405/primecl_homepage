@@ -12,10 +12,10 @@ function setHeader() {
               <span>Company</span>
             </li>
             <li class="menu-item">
-              <span>Contents Service</span>
+              <span>Service</span>
             </li>
             <li class="menu-item">
-              <span>Contents Creation</span>
+              <span>Creation</span>
             </li>
             <li class="menu-item">
               <span>Studio</span>
@@ -46,10 +46,10 @@ function setHeader() {
         case "Company":
           setCompanyPage();
           break;
-        case "Contents Service":
+        case "Service":
           setContentsServicePage();
           break;
-        case "Contents Creation":
+        case "Creation":
           setContentsCreationPage();
           observeFadeUp();
           break;

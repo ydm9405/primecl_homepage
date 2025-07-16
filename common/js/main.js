@@ -303,21 +303,26 @@ function hideMainPage() {
 }
 
 function setCompanyPage() {
+  console.log("setCompanyPage 호출됨")
   const html = `
     <main>
+      <nav class="category-nav">
+        <ul class="timeline">
+          <li class="active"><a href="#banner_01">핵심 가치</a></li>
+          <li><a href="#banner_02">교육 철학</a></li>
+          <li><a href="#banner_03">콘텐츠 방향</a></li>
+        </ul>
+      </nav>
       <section>
         <div class="companyWrap">
-          <div class="banner_01">
+          <div class="banner_01" id="banner_01">
             <img class="companyBanner" src="./common/img/company/banner_01.png"/>
           </div>
-          <div class="banner_02">
+          <div class="banner_02" id="banner_02">
             <img class="companyBanner" src="./common/img/company/banner_02.png"/>
           </div>
-          <div class="banner_03">
+          <div class="banner_03" id="banner_03">
             <img class="companyBanner" src="./common/img/company/banner_03.png"/>
-          </div>
-          <div class="banner_04">
-            <img class="companyBanner" src="./common/img/company/banner_04.png"/>
           </div>
         </div>
       </section>
@@ -331,9 +336,59 @@ function setCompanyPage() {
   if (mvw && mvw.parentElement) {
     mvw.parentElement.style.display = "none";
   }
+
+  // ✅ 클릭 시 부드러운 스크롤
+  document.addEventListener("click", function (e) {
+    const target = e.target.closest("a[href^='#banner_']");
+    if (!target) return;
+
+    e.preventDefault();
+
+    const headerHeight = 104;
+    const id = target.getAttribute("href");
+    const section = document.querySelector(id);
+    if (!section) return;
+
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+    const scrollTo = sectionTop - headerHeight;
+
+    window.scrollTo({
+      top: scrollTo,
+      behavior: "smooth"
+    });
+
+    document.querySelectorAll(".timeline li").forEach(li => li.classList.remove("active"));
+    target.closest("li").classList.add("active");
+  });
+
+  // ✅ 스크롤 시 자동 active 표시
+  window.addEventListener("scroll", function () {
+    const headerHeight = 104;
+    const sections = document.querySelectorAll("[id^='banner_']");
+
+    let currentId = null;
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const offsetTop = rect.top;
+
+      if (offsetTop <= headerHeight + 10 && offsetTop + rect.height > headerHeight + 10) {
+        currentId = "#" + section.id;
+      }
+    });
+
+    if (currentId) {
+      document.querySelectorAll(".timeline li").forEach(li => li.classList.remove("active"));
+      const activeLink = document.querySelector(`.timeline li a[href='${currentId}']`);
+      if (activeLink) {
+        activeLink.closest("li").classList.add("active");
+      }
+    }
+  });
 }
 
 function setContentsServicePage() {
+  console.log("setContentsServicePage 호출됨")
   const html = `
     <main>
       <section style="padding: 100px 40px;">
@@ -347,6 +402,7 @@ function setContentsServicePage() {
 }
 
 function setContentsCreationPage() {
+  console.log("setContentsCreationPage 호출됨")
   const html = `
     <main>
       <nav class="category-nav">
@@ -394,7 +450,7 @@ function setContentsCreationPage() {
 
     e.preventDefault();
 
-    const headerHeight = 110;
+    const headerHeight = 104;
     const id = target.getAttribute("href");
     const section = document.querySelector(id);
     if (!section) return;
@@ -413,7 +469,7 @@ function setContentsCreationPage() {
 
 
   window.addEventListener("scroll", function () {
-    const headerHeight = 110;
+    const headerHeight = 104;
     const sections = document.querySelectorAll("[id^='category-']");
 
     let currentId = null;
@@ -448,6 +504,7 @@ function setContentsCreationPage() {
 }
 
 function setContentsStudioPage() {
+  console.log("setContentsStudioPage 호출됨")
   const html = `
     <main>
       <section style="padding: 100px 40px;">

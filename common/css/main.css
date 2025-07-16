@@ -120,7 +120,7 @@ main {
 
 .category-nav {
     position: fixed;
-    top: 270px;
+    top: 390px;
     left: 60px;
     z-index: 1000;
 }
