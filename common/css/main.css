@@ -235,3 +235,23 @@ main {
     color: white;
     cursor: pointer;
 }
+
+.course-card.hidden {
+    display: none;
+}
+
+.more-wrap {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-btn {
+    background: #253485;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}

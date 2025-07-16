@@ -284,7 +284,7 @@ function setMainPage() {
   if (main) main.style.display = "block";
   if (video) {
     video.style.display = "block"; // ✅ 다시 보이게
-    if (video.paused) video.play().catch(() => {});
+    if (video.paused) video.play().catch(() => { });
   }
 
   const footer = document.querySelector("footer");
@@ -305,8 +305,21 @@ function hideMainPage() {
 function setCompanyPage() {
   const html = `
     <main>
-      <section style="padding: 100px 40px;">
-        <h1>회사 소개</h1>
+      <section>
+        <div class="companyWrap">
+          <div class="banner_01">
+            <img class="companyBanner" src="./common/img/company/banner_01.png"/>
+          </div>
+          <div class="banner_02">
+            <img class="companyBanner" src="./common/img/company/banner_02.png"/>
+          </div>
+          <div class="banner_03">
+            <img class="companyBanner" src="./common/img/company/banner_03.png"/>
+          </div>
+          <div class="banner_04">
+            <img class="companyBanner" src="./common/img/company/banner_04.png"/>
+          </div>
+        </div>
       </section>
     </main>
   `;
@@ -353,17 +366,20 @@ function setContentsCreationPage() {
         </h2>
         ${contentsCategory
       .map((cat) => {
-        const cards = generateCourseCards(contentsData[cat.key] || []);
+        const cardsHTML = generateCourseCards(contentsData[cat.key] || [], cat.key);
+        const hasMore = (contentsData[cat.key] || []).length > 6;
+
         return `
-              <div class="category fade-up" id="category-${cat.key}">
-                <h3>
-                  <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
-                  ${cat.name}
-                  <div class="line"></div>
-                </h3>
-                <div class="card-grid">${cards}</div>
-              </div>
-            `;
+          <div class="category fade-up" id="category-${cat.key}">
+            <h3>
+              <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
+              ${cat.name}
+              <div class="line"></div>
+            </h3>
+            <div class="card-grid">${cardsHTML}</div>
+            ${hasMore ? `<div class="more-wrap"><button class="more-btn" data-target="${cat.key}">더보기</button></div>` : ""}
+          </div>
+        `;
       })
       .join("")}
       </section>
@@ -420,6 +436,15 @@ function setContentsCreationPage() {
     }
   });
   observeFadeUp();
+
+  document.querySelectorAll(".more-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const key = btn.dataset.target;
+      document.querySelectorAll(`.course-card.hidden[data-category="${key}"]`)
+        .forEach(card => card.classList.remove("hidden"));
+      btn.style.display = "none"; // 버튼은 숨김
+    });
+  });
 }
 
 function setContentsStudioPage() {
@@ -435,25 +460,22 @@ function setContentsStudioPage() {
   renderBottomBanner();
 }
 
-function generateCourseCards(dataList) {
+function generateCourseCards(dataList, categoryKey) {
   return dataList
-    .map(
-      (item) => `
-        <div class="course-card">
-          <div class="title_wrap">
-            <img src="${item.image}" alt="썸네일" />
-            <p class="course-title">${item.title}</p>
-          </div>
-          <div class="btn-group">
-            <a href="${item.materialLink}" download>
-              <button>과정 소개자료</button>
-            </a>
-            <button onclick="openPreviewModal('${item.previewLink}')">맛보기 영상</button>
-          </div>
+    .map((item, index) => `
+      <div class="course-card ${index >= 6 ? 'hidden' : ''}" data-category="${categoryKey}">
+        <div class="title_wrap">
+          <img src="${item.image}" alt="썸네일" />
+          <p class="course-title">${item.title}</p>
         </div>
-      `
-    )
-    .join("");
+        <div class="btn-group">
+          <a href="${item.materialLink}" download>
+            <button>과정 소개자료</button>
+          </a>
+          <button onclick="openPreviewModal('${item.previewLink}')">맛보기 영상</button>
+        </div>
+      </div>
+    `).join("");
 }
 
 function openPreviewModal(link) {
