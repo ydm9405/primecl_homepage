@@ -20,7 +20,7 @@ main {
 .mainTitle {
     font-family: 'pretendard';
     font-weight: 700;
-    font-size: 41px;
+    font-size: clamp(18px, 2vw, 41px);
     margin-bottom: 100px;
     margin-left: 50px;
     color: #253485;
@@ -29,7 +29,7 @@ main {
 .companyTitle {
     font-family: 'pretendard';
     font-weight: 700;
-    font-size: 41px;
+    font-size: clamp(18px, 2vw, 41px);
     color: #253485;
     position: absolute;
     margin-top: 230px;
@@ -268,17 +268,23 @@ main {
 
 .companyBanner_main {
     position: relative;
+    width: 100%;
 }
 
 .companyWrap {
     position: relative;
     padding: 0px 130px;
     margin-top: -5.2%;
+    width:100%
 }
 
 .sub_title {
     font-family: 'Poppins';
     font-weight: 700;
-    font-size: 30px;
+    font-size: clamp(18px, 1.5vw, 30px);
     color:#2cb0f4;
+}
+
+.companyBanner {
+    width: 100%;
 }

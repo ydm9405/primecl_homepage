@@ -422,11 +422,11 @@ function setContentsCreationPage() {
           <li><a href="#category-organizationalManagement">조직관리</a></li>
         </ul>
       </nav>
+      <section class="contents-creation">
         <h2 class="mainTitle">
           자체과정 콘텐츠 부문
           <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="메인타이틀이미지">
         </h2>
-      <section class="contents-creation">
         ${contentsCategory
       .map((cat) => {
         const cardsHTML = generateCourseCards(contentsData[cat.key] || [], cat.key);
