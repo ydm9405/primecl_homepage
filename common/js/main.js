@@ -308,13 +308,19 @@ function setCompanyPage() {
     <main>
       <nav class="category-nav">
         <ul class="timeline">
-          <li class="active"><a href="#banner_01">핵심 가치</a></li>
-          <li><a href="#banner_02">교육 철학</a></li>
-          <li><a href="#banner_03">콘텐츠 방향</a></li>
+          <li class="active"><a href="#banner_01">Info</a></li>
+          <li><a href="#banner_02">History</a></li>
+          <li><a href="#banner_03">Value</a></li>
         </ul>
       </nav>
       <section>
+        <img class="companyBanner_main" src="./common/img/company/banner_main.png">
         <div class="companyWrap">
+          <h2 class="companyTitle">
+            <span class="sub_title">Company Info</span></br>
+            프라임콘텐츠랩 개요
+            <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
+          </h2>
           <div class="banner_01" id="banner_01">
             <img class="companyBanner" src="./common/img/company/banner_01.png"/>
           </div>
@@ -416,10 +422,11 @@ function setContentsCreationPage() {
           <li><a href="#category-organizationalManagement">조직관리</a></li>
         </ul>
       </nav>
-      <section class="contents-creation">
-        <h2>자체과정 콘텐츠 부문
+        <h2 class="mainTitle">
+          자체과정 콘텐츠 부문
           <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="메인타이틀이미지">
         </h2>
+      <section class="contents-creation">
         ${contentsCategory
       .map((cat) => {
         const cardsHTML = generateCourseCards(contentsData[cat.key] || [], cat.key);

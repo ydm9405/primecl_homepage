@@ -13,11 +13,11 @@ main {
 }
 
 .contents-creation {
-    padding: 10px 130px;
+    padding: 0px 130px;
     background: #f8f9fa;
 }
 
-.contents-creation h2 {
+.mainTitle {
     font-family: 'pretendard';
     font-weight: 700;
     font-size: 41px;
@@ -26,7 +26,17 @@ main {
     color: #253485;
 }
 
-.contents-creation .main-title-img {
+.companyTitle {
+    font-family: 'pretendard';
+    font-weight: 700;
+    font-size: 41px;
+    color: #253485;
+    position: absolute;
+    margin-top: 230px;
+    margin-left: 40px;
+}
+
+.main-title-img {
     display: inline-block;
     position: relative;
     top: 3px;
@@ -254,4 +264,21 @@ main {
     font-weight: bold;
     cursor: pointer;
     border: none;
+}
+
+.companyBanner_main {
+    position: relative;
+}
+
+.companyWrap {
+    position: relative;
+    padding: 0px 130px;
+    margin-top: -5.2%;
+}
+
+.sub_title {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 30px;
+    color:#2cb0f4;
 }
