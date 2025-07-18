@@ -39,9 +39,17 @@ function setHeader() {
 
   document.body.insertAdjacentHTML("beforeend", headerHTML);
 
+  document.querySelectorAll(".menu-item").forEach(item => {
+    item.addEventListener("click", () => {
+      document.querySelectorAll(".menu-item").forEach(el => el.classList.remove("active"));
+      item.classList.add("active");
+    });
+  });
+
   document.querySelectorAll(".menu-item span").forEach((item) => {
     item.addEventListener("click", () => {
       const menu = item.textContent.trim();
+      window.scrollTo({ top: 0, behavior: "instant" });
       switch (menu) {
         case "Company":
           setCompanyPage();

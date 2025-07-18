@@ -100,6 +100,10 @@ body:not(.loaded) .site-header {
     transition: transform 0.3s ease;
 }
 
+.menu-item.active span::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
 .menu-item span:hover::after {
     transform: translateX(-50%) scaleX(1);
 }

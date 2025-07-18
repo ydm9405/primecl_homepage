@@ -32,8 +32,8 @@ main {
     font-size: clamp(18px, 2vw, 41px);
     color: #253485;
     position: absolute;
-    margin-top: 230px;
-    margin-left: 40px;
+    margin-top: 13%;
+    margin-left: 2%;
 }
 
 .main-title-img {
@@ -275,14 +275,14 @@ main {
     position: relative;
     padding: 0px 130px;
     margin-top: -5.2%;
-    width:100%
+    width: 100%
 }
 
 .sub_title {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: clamp(18px, 1.5vw, 30px);
-    color:#2cb0f4;
+    color: #2cb0f4;
 }
 
 .companyBanner {
