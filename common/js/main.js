@@ -390,6 +390,14 @@ function setCompanyPage() {
         activeLink.closest("li").classList.add("active");
       }
     }
+    const nav = document.querySelector(".category-nav");
+    if (nav) {
+      if (scrollY > 390) {
+        nav.classList.add("shrink");
+      } else {
+        nav.classList.remove("shrink");
+      }
+    }
   });
 }
 
@@ -500,6 +508,14 @@ function setContentsCreationPage() {
       const activeLink = document.querySelector(`.timeline li a[href='${currentId}']`);
       if (activeLink) {
         activeLink.closest("li").classList.add("active");
+      }
+    }
+    const nav = document.querySelector(".category-nav");
+    if (nav) {
+      if (scrollY > 390) {
+        nav.classList.add("shrink");
+      } else {
+        nav.classList.remove("shrink");
       }
     }
   });
