@@ -413,7 +413,7 @@ function setContentsServicePage() {
             공공/대학 사업
             <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
           </h2>
-          <div style="width:500px; height:500px;">
+          <div style="width:500px; height:1500px;">
           </div>
         </div>
       </section>
@@ -552,7 +552,7 @@ function setContentsStudioPage() {
             스튜디오
             <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
           </h2>
-          <div style="width:500px; height:500px;">
+          <div style="width:500px; height:1500px;">
           </div>
         </div>
       </section>
