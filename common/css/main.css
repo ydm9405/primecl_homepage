@@ -12,18 +12,14 @@ main {
     cursor: pointer;
 }
 
-.contents-creation {
-    padding: 0px 130px;
-    background: #f8f9fa;
-}
-
 .mainTitle {
     font-family: 'pretendard';
     font-weight: 700;
     font-size: clamp(18px, 2vw, 41px);
-    margin-bottom: 100px;
-    margin-left: 50px;
     color: #253485;
+    position: absolute;
+    margin-left: 7%;
+    z-index: 1;
 }
 
 .companyTitle {
@@ -32,8 +28,7 @@ main {
     font-size: clamp(18px, 2vw, 41px);
     color: #253485;
     position: absolute;
-    margin-top: 13%;
-    margin-left: 2%;
+    margin-left: 7%;
 }
 
 .main-title-img {
@@ -287,4 +282,13 @@ main {
 
 .companyBanner {
     width: 100%;
+}
+
+#category-leadership {
+    padding-top: 15%;
+}
+
+.categoryWrap {
+    padding: 0px 130px;
+    margin-top: -5.2%;
 }

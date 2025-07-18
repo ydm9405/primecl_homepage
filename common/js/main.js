@@ -318,7 +318,7 @@ function setCompanyPage() {
         <div class="companyWrap">
           <h2 class="companyTitle">
             <span class="sub_title">Company Info</span></br>
-            프라임콘텐츠랩 개요
+            회사 소개
             <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
           </h2>
           <div class="banner_01" id="banner_01">
@@ -422,8 +422,12 @@ function setContentsCreationPage() {
           <li><a href="#category-organizationalManagement">조직관리</a></li>
         </ul>
       </nav>
+      <img class="companyBanner_main" src="./common/img/company/banner_main.png">
       <section class="contents-creation">
+          <div class="categoryWrap">
+          
         <h2 class="mainTitle">
+          <span class="sub_title">Company Creation</span></br>
           자체과정 콘텐츠 부문
           <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="메인타이틀이미지">
         </h2>
@@ -433,18 +437,19 @@ function setContentsCreationPage() {
         const hasMore = (contentsData[cat.key] || []).length > 6;
 
         return `
-          <div class="category fade-up" id="category-${cat.key}">
-            <h3>
-              <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
-              ${cat.name}
-              <div class="line"></div>
-            </h3>
-            <div class="card-grid">${cardsHTML}</div>
-            ${hasMore ? `<div class="more-wrap"><button class="more-btn" data-target="${cat.key}">더보기</button></div>` : ""}
-          </div>
+            <div class="category fade-up" id="category-${cat.key}">
+              <h3>
+                <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
+                ${cat.name}
+                <div class="line"></div>
+              </h3>
+              <div class="card-grid">${cardsHTML}</div>
+              ${hasMore ? `<div class="more-wrap"><button class="more-btn" data-target="${cat.key}">더보기</button></div>` : ""}
+            </div>
         `;
       })
       .join("")}
+          </div>
       </section>
     </main>
   `;
