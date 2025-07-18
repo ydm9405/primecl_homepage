@@ -31,6 +31,24 @@ main {
     margin-left: 7%;
 }
 
+.serviceTitle {
+    font-family: 'pretendard';
+    font-weight: 700;
+    font-size: clamp(18px, 2vw, 41px);
+    color: #253485;
+    position: absolute;
+    margin-left: 7%;
+}
+
+.studioTitle {
+    font-family: 'pretendard';
+    font-weight: 700;
+    font-size: clamp(18px, 2vw, 41px);
+    color: #253485;
+    position: absolute;
+    margin-left: 7%;
+}
+
 .main-title-img {
     display: inline-block;
     position: relative;
@@ -269,9 +287,24 @@ main {
 .companyBanner_main {
     position: relative;
     width: 100%;
+    z-index: 1;
 }
 
 .companyWrap {
+    position: relative;
+    padding: 0px 130px;
+    margin-top: -5.2%;
+    width: 100%
+}
+
+.serviceWrap {
+    position: relative;
+    padding: 0px 130px;
+    margin-top: -5.2%;
+    width: 100%
+}
+
+.studioWrap {
     position: relative;
     padding: 0px 130px;
     margin-top: -5.2%;

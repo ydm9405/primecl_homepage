@@ -44,7 +44,7 @@ const contentsData = {
     {
       title: "일잘러의 멘탈관리 수업 - 회복탄력성",
       image: "./common/img/contentsCreation/resilience.png",
-      materialLink: "./common/down/resilience.zip",
+      materialLink: "./common/down/resilience.pdf",
       previewLink: "https://player.vimeo.com/video/1099890425"
     },
     {
@@ -405,8 +405,17 @@ function setContentsServicePage() {
   console.log("setContentsServicePage 호출됨")
   const html = `
     <main>
-      <section style="padding: 100px 40px;">
-        <h1>Contents Service</h1>
+      <section>
+        <img class="companyBanner_main" src="./common/img/company/banner_main.png">
+        <div class="serviceWrap">
+          <h2 class="serviceTitle">
+            <span class="sub_title">Contents Service</span></br>
+            공공/대학 사업
+            <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
+          </h2>
+          <div style="width:500px; height:500px;">
+          </div>
+        </div>
       </section>
     </main>
   `;
@@ -435,7 +444,7 @@ function setContentsCreationPage() {
           <div class="categoryWrap">
           
         <h2 class="mainTitle">
-          <span class="sub_title">Company Creation</span></br>
+          <span class="sub_title">Contents Creation</span></br>
           자체과정 콘텐츠 부문
           <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="메인타이틀이미지">
         </h2>
@@ -535,8 +544,17 @@ function setContentsStudioPage() {
   console.log("setContentsStudioPage 호출됨")
   const html = `
     <main>
-      <section style="padding: 100px 40px;">
-        <h1>Contents Studio</h1>
+      <section>
+        <img class="companyBanner_main" src="./common/img/company/banner_main.png">
+        <div class="studioWrap">
+          <h2 class="studioTitle">
+            <span class="sub_title">Studio</span></br>
+            스튜디오
+            <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
+          </h2>
+          <div style="width:500px; height:500px;">
+          </div>
+        </div>
       </section>
     </main>
   `;
