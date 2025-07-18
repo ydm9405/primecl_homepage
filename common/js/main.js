@@ -44,7 +44,7 @@ const contentsData = {
     {
       title: "일잘러의 멘탈관리 수업 - 회복탄력성",
       image: "./common/img/contentsCreation/resilience.png",
-      materialLink: "./common/down/resilience.pdf",
+      materialLink: "./common/down/resilience.zip",
       previewLink: "https://player.vimeo.com/video/1099890425"
     },
     {
