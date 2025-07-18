@@ -336,7 +336,7 @@ function setCompanyPage() {
   `;
   hideMainPage();
   replaceContent(html);
-  renderBottomBanner();
+  renderFooterAfterImagesLoaded();
 
   const mvw = document.getElementById("mainVideoWrapper");
   if (mvw && mvw.parentElement) {
@@ -404,7 +404,7 @@ function setContentsServicePage() {
   `;
   hideMainPage();
   replaceContent(html);
-  renderBottomBanner();
+  renderFooterAfterImagesLoaded();
 }
 
 function setContentsCreationPage() {
@@ -455,7 +455,7 @@ function setContentsCreationPage() {
   `;
   hideMainPage();
   replaceContent(html);
-  renderBottomBanner();
+  renderFooterAfterImagesLoaded();
   document.addEventListener("click", function (e) {
     const target = e.target.closest("a[href^='#category-']");
     if (!target) return;
@@ -526,7 +526,7 @@ function setContentsStudioPage() {
   `;
   hideMainPage();
   replaceContent(html);
-  renderBottomBanner();
+  renderFooterAfterImagesLoaded();
 }
 
 function generateCourseCards(dataList, categoryKey) {
@@ -589,4 +589,27 @@ function observeFadeUp() {
   });
 
   document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+}
+
+function renderFooterAfterImagesLoaded() {
+  const imgs = document.querySelectorAll("main img");
+  let loaded = 0;
+  const total = imgs.length;
+
+  if (total === 0) {
+    renderBottomBanner();
+    return;
+  }
+
+  const checkDone = () => {
+    loaded++;
+    if (loaded === total) {
+      renderBottomBanner();
+    }
+  };
+
+  imgs.forEach((img) => {
+    img.addEventListener("load", checkDone);
+    img.addEventListener("error", checkDone); // ❗에러도 포함
+  });
 }
