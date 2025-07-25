@@ -767,7 +767,7 @@ function setContentsStudioPage() {
         <img class="studioBanner_main" src="./common/img/studio/banner_main.png">
         <div class="studioWrap">
           <h2 class="studioTitle">
-            <span class="sub_title">studio Info</span></br>
+            <span class="sub_title">Studio Info</span></br>
             스튜디오 A
             <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
           </h2>

@@ -17,7 +17,7 @@ function setHeader() {
             //</li>
             +`
             <li class="menu-item">
-              <span>Creation</span>
+              <span>자체 과정</span>
             </li>
             <li class="menu-item">
               <span>스튜디오</span>
@@ -51,7 +51,7 @@ function setHeader() {
         //case "Service":
         //  setContentsServicePage();
         //  break;
-        case "Creation":
+        case "자체 과정":
           setContentsCreationPage();
           observeFadeUp();
           break;
