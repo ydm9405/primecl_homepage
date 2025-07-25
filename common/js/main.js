@@ -741,7 +741,6 @@ function setContentsStudioPage() {
           </div>
           <div class="banner_02" id="banner_02">
           <h2 class="studioTitle">
-            <span class="sub_title">studio Info</span></br>
             스튜디오 B
             <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
           </h2>
@@ -749,7 +748,6 @@ function setContentsStudioPage() {
           </div>
           <div class="banner_03" id="banner_03">
           <h2 class="studioTitle">
-            <span class="sub_title">studio Info</span></br>
             스튜디오 C
             <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
           </h2>
