@@ -772,7 +772,7 @@ function setContentsStudioPage() {
     const id = target.getAttribute("href");
     const section = document.querySelector(id);
     if (!section) return;
-`
+
     const sectionTop = section.getBoundingClientRect().top + window.scrollY;
     const scrollTo = sectionTop - headerHeight;
 
