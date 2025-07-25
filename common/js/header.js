@@ -22,21 +22,12 @@ function setHeader() {
             <li class="menu-item">
               <span>스튜디오</span>
             </li>
+            <li class="menu-item">
+              <span>오시는 길</span>
+            </li>
           </ul>
         </nav>
-        <button id="scrollToMap" class="map-btn">지도보기</button>
       </header>
-    
-      <!-- 지도 팝업 -->
-      <div id="mapPopup" class="map-popup">
-        <div class="map-popup-content">
-          <button id="closeMapPopup" class="close-btn">닫기 ✖</button>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1331.2726296593441!2d126.88693849162053!3d37.4768270442357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6100118f9ac3%3A0xc3e406ca227ee7e!2z7Y2867iU66atIOqwgOyCsA!5e0!3m2!1sko!2skr!4v1750375926441!5m2!1sko!2skr"
-            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-      </div>
     `;
 
   document.body.insertAdjacentHTML("beforeend", headerHTML);
@@ -66,6 +57,9 @@ function setHeader() {
           break;
         case "스튜디오":
           setContentsStudioPage();
+          break;
+        case "오시는 길":
+          setLocationPage();
           break;
         default:
           setMainPage();

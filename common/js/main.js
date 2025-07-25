@@ -572,12 +572,47 @@ function setContentsServicePage() {
             공공/대학 사업
             <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
           </h2>
-          <div style="width:500px; height:1500px;">
           </div>
         </div>
       </section>
     </main>
   `;
+  hideMainPage();
+  replaceContent(html);
+  renderFooterAfterImagesLoaded();
+}
+
+function setLocationPage() {
+  console.log("setLocationPage 호출됨");
+
+  const html = `
+    <main>
+      <section>
+        <img class="companyBanner_main" src="./common/img/location/banner_main.png">
+        <div class="locationWrap">
+          <h2 class="locationTitle">
+            <span class="sub_title">Location</span></br>
+            오시는 길
+            <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
+          </h2>
+
+          <!-- 지도 삽입 -->
+          <div class="map-embed-container">
+            <div class="map-loading">지도를 불러오는 중...</div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1331.2726296593441!2d126.88693849162053!3d37.4768270442357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6100118f9ac3%3A0xc3e406ca227ee7e!2z7Y2867iU66atIOqwgOyCsA!5e0!3m2!1sko!2skr!4v1750375926441!5m2!1sko!2skr"
+              width="100%" height="700px" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" onload="document.querySelector('.map-loading').style.display='none'"></iframe>
+          </div>
+          <div class="banner_01" id="banner_01">
+            <img class="locationBanner" src="./common/img/location/banner_01.png"/>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  `;
+
   hideMainPage();
   replaceContent(html);
   renderFooterAfterImagesLoaded();
