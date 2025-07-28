@@ -122,12 +122,12 @@ const contentsData = {
       materialLink: "./common/down/mongoDB.pdf",
       previewLink: "https://player.vimeo.com/video/1104024302"
     },
-    //{
-    //  title: "처음 배우는 카프카",
-    //  image: "./common/img/contentsCreation/kafka.png",
-    //  materialLink: "./common/down/kafka.pdf",
-    //  previewLink: "https://player.vimeo.com/video/1104024302"
-    //},
+    {
+      title: "처음 배우는 카프카",
+      image: "./common/img/contentsCreation/kafka.png",
+      materialLink: "./common/down/kafka.pdf",
+      previewLink: "https://player.vimeo.com/video/1105033623"
+    },
   ],
   //업무관리
   workManagement: [
