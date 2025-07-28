@@ -119,8 +119,6 @@ body:not(.loaded) .site-header {
 }
 
 .logo {
-    font-family: 'Pretendard';
-    font-weight: 500;
     cursor: pointer;
 }
 
