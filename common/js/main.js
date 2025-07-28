@@ -742,6 +742,17 @@ function setContentsCreationPage() {
   });
   observeFadeUp();
 
+  // 🍀 콘텐츠 생성 페이지 로딩 완료 후 추가
+  document.querySelectorAll(".course-card .title_wrap").forEach(el => {
+    el.addEventListener("click", () => {
+      const card = el.closest(".course-card");
+      const link = card?.dataset?.preview;
+      if (link) {
+        openPreviewModal(link);
+      }
+    });
+  });
+
   document.querySelectorAll(".more-btn").forEach(btn => {
     btn.addEventListener("click", function () {
       const key = btn.dataset.target;
@@ -855,28 +866,16 @@ function setContentsStudioPage() {
 function generateCourseCards(dataList, categoryKey) {
   return dataList
     .map((item, index) => {
-      const isPdf = item.materialLink.endsWith(".pdf");
-      const materialBtn = isPdf
-        ? `<button onclick="openPdfInNewWindow('${item.materialLink}')">과정 소개자료</button>`
-        : `<a href="${item.materialLink}" download><button>과정 소개자료</button></a>`;
 
       return `
-        <div class="course-card ${index >= 6 ? 'hidden' : ''}" data-category="${categoryKey}">
+        <div class="course-card ${index >= 8 ? 'hidden' : ''}" data-category="${categoryKey}" data-preview="${item.previewLink}">
           <div class="title_wrap">
             <img src="${item.image}" alt="썸네일" />
             <p class="course-title">${item.title}</p>
           </div>
-          <div class="btn-group">
-            ${materialBtn}
-            <button onclick="openPreviewModal('${item.previewLink}')">맛보기 영상</button>
-          </div>
         </div>
       `;
     }).join("");
-}
-
-function openPdfInNewWindow(url) {
-  window.open(url, "_blank", "width=1200,height=800,scrollbars=yes");
 }
 
 function openPreviewModal(link) {

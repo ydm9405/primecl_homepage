@@ -102,7 +102,7 @@ main {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(360px, 0fr));
     justify-content: center;
     margin: 0 auto;
     padding: 0 6%;
@@ -110,14 +110,15 @@ main {
 
 .course-card {
     text-align: center;
-    width: 400px;
+    width: 350px;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .course-card .title_wrap {
     background: #fff;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .course-card img {
@@ -127,7 +128,7 @@ main {
 .course-title {
     font-family: 'pretendard';
     font-weight: 800;
-    font-size: 21px;
+    font-size: 18px;
     height: 80px;
     display: flex;
     align-items: center;
