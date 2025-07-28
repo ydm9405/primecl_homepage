@@ -420,6 +420,10 @@ main {
     visibility: hidden;
 }
 
+.contents-creation {
+    margin-bottom: 240px;
+}
+
 .contents-creation.hidden-until-loaded {
     visibility: hidden;
 }
