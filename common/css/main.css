@@ -13,7 +13,7 @@ main {
 }
 
 .mainTitle {
-    font-family: 'pretendard';
+    font-family: 'Paperlogy';
     font-weight: 700;
     font-size: clamp(18px, 2vw, 41px);
     color: #253485;
@@ -24,7 +24,7 @@ main {
 }
 
 .companyTitle {
-    font-family: 'pretendard';
+    font-family: 'Paperlogy';
     font-weight: 700;
     font-size: clamp(18px, 2vw, 41px);
     color: #253485;
@@ -34,7 +34,7 @@ main {
 }
 
 .serviceTitle {
-    font-family: 'pretendard';
+    font-family: 'Paperlogy';
     font-weight: 700;
     font-size: clamp(18px, 2vw, 41px);
     color: #253485;
@@ -43,7 +43,7 @@ main {
 }
 
 .studioTitle {
-    font-family: 'pretendard';
+    font-family: 'Paperlogy';
     font-weight: 700;
     font-size: clamp(18px, 2vw, 41px);
     color: #253485;
@@ -53,7 +53,7 @@ main {
 }
 
 .locationTitle {
-    font-family: 'pretendard';
+    font-family: 'Paperlogy';
     font-weight: 700;
     font-size: clamp(18px, 2vw, 41px);
     color: #253485;
@@ -78,7 +78,7 @@ main {
     margin-bottom: 30px;
     display: flex;
     align-items: flex-start;
-    font-family: 'pretendard';
+    font-family: 'Paperlogy';
     font-weight: 500;
     font-size: 34px;
     color: #253485;
@@ -115,10 +115,42 @@ main {
     margin-bottom: 60px;
 }
 
+/* 오버레이 기본 숨김 */
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* 반투명 검정 */
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    border-radius: 4px;
+}
+
+/* 텍스트 스타일 */
+.preview-text {
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'Paperlogy';
+    word-break: keep-all;
+    white-space: normal;
+}
+
 .course-card .title_wrap {
     background: #fff;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card .title_wrap:hover .preview-overlay {
+    opacity: 1;
 }
 
 .course-card img {
@@ -126,10 +158,10 @@ main {
 }
 
 .course-title {
-    font-family: 'pretendard';
+    font-family: 'Paperlogy';
     font-weight: 800;
     font-size: 18px;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,7 +183,7 @@ main {
     border-radius: 7px;
     cursor: pointer;
     width: 130px;
-    font-family: 'pretendard';
+    font-family: 'Paperlogy';
     font-weight: 800;
     font-size: 17px;
 }
@@ -574,14 +606,16 @@ main {
 }
 
 .map-loading {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 18px;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 1;
 }

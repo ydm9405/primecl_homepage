@@ -872,6 +872,9 @@ function generateCourseCards(dataList, categoryKey) {
           <div class="title_wrap">
             <img src="${item.image}" alt="썸네일" />
             <p class="course-title">${item.title}</p>
+            <div class="preview-overlay">
+              <span class="preview-text"></span>
+            </div>
           </div>
         </div>
       `;
