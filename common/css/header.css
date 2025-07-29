@@ -210,15 +210,15 @@ position: absolute;
 }
 
 .business-wrap {
-    font-family: Paperlogy;
+font-family: Paperlogy;
     font-weight: 500;
     position: absolute;
     left: 50%;
     top: 50%;
-        transform: translate(-20%, -100%);
-    min-width: 350px;
+    transform: translate(-30%, -70%);
+    min-width: 510px;
     text-align: left;
-    font-size: 22px;
+    font-size: 26px;
 }
 
 .business-text {
