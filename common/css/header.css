@@ -213,14 +213,14 @@ position: absolute;
     position: absolute;
     left: 50%;
     top: 50%;
-        transform: translate(-20%, -120%);
+        transform: translate(-20%, -100%);
     min-width: 350px;
     text-align: left;
     font-size: 22px;
 }
 
 .business-text {
-    padding-bottom:5px
+    padding-bottom:15px
 }
 
 .business-impact {
