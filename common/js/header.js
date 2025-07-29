@@ -11,11 +11,11 @@ function setHeader() {
             <li class="menu-item">
               <span>회사 소개</span>
             </li>`
-            //공공, 대학 사업 보류
-            //<li class="menu-item">
-            //  <span>Service</span>
-            //</li>
-            +`
+    //공공, 대학 사업 보류
+    //<li class="menu-item">
+    //  <span>Service</span>
+    //</li>
+    + `
             <li class="menu-item">
               <span>자체 과정</span>
             </li>
@@ -27,7 +27,19 @@ function setHeader() {
             </li>
           </ul>
         </nav>
+        <div class="contact-btn">
+          <button id="openContactPopup">사업 문의</button>
+        </div>
       </header>
+      <div class="contact-popup" id="contactPopup">
+        <div class="popup-content">
+          <button class="close-popup" id="closeContactPopup">&times;</button>
+          <div class="business-wrap">
+            <p class= "business-text">콘텐츠 개발: <span class="business-impact">louis63@primecl.co.kr</span></p>
+            <p class= "business-text">자체과정 도입: <span class="business-impact">wendy3464@primecl.co.kr</span></p>
+          </div>
+        </div>
+      </div>
     `;
 
   document.body.insertAdjacentHTML("beforeend", headerHTML);
@@ -66,30 +78,30 @@ function setHeader() {
       }
     });
   });
+  const openBtn = document.getElementById("openContactPopup");
+  const closeBtn = document.getElementById("closeContactPopup");
+  const contactPopup = document.getElementById("contactPopup");
 
-  const scrollBtn = document.getElementById("scrollToMap");
-  const closeBtn = document.getElementById("closeMapPopup");
-  const mapPopup = document.getElementById("mapPopup");
-
-  if (scrollBtn && mapPopup) {
-    scrollBtn.addEventListener("click", () => {
-      mapPopup.style.display = "flex";
+  if (openBtn && contactPopup) {
+    openBtn.addEventListener("click", () => {
+      contactPopup.style.display = "flex";
     });
   }
 
-  if (closeBtn && mapPopup) {
+  if (closeBtn && contactPopup) {
     closeBtn.addEventListener("click", () => {
-      mapPopup.style.display = "none";
+      contactPopup.style.display = "none";
     });
   }
 
-document.getElementById("logoLink").addEventListener("click", (e) => {
-  e.preventDefault();
 
-  // 🔸 메뉴 active 클래스 제거
-  document.querySelectorAll(".menu-item").forEach(el => el.classList.remove("active"));
+  document.getElementById("logoLink").addEventListener("click", (e) => {
+    e.preventDefault();
 
-  setMainPage();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+    // 🔸 메뉴 active 클래스 제거
+    document.querySelectorAll(".menu-item").forEach(el => el.classList.remove("active"));
+
+    setMainPage();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }

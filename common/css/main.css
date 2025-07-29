@@ -2,16 +2,6 @@ main {
     padding-top: 104px;
 }
 
-.contact-btn button {
-    padding: 8px 20px;
-    border: 2px solid #253485;
-    background: #f9f9f9;
-    color: #253485;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 .mainTitle {
     font-family: 'Paperlogy';
     font-weight: 700;

@@ -101,7 +101,7 @@ body:not(.loaded) .site-header {
 }
 
 .menu-item.active span::after {
-  transform: translateX(-50%) scaleX(1);
+    transform: translateX(-50%) scaleX(1);
 }
 
 .menu-item span:hover::after {
@@ -149,4 +149,80 @@ body:not(.loaded) .site-header {
     display: flex;
     justify-content: space-between;
     width: 1450px;
+}
+
+.contact-btn {
+    margin-left: auto;
+}
+
+.contact-btn button {
+    padding: 10px 10px;
+    border: 2px solid #13256b;
+    background: #253485;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 110px;
+}
+
+.contact-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative;
+    width: 90vw;
+    /* 화면 너비의 90% */
+    max-width: 1111px;
+    aspect-ratio: 1111 / 503;
+    /* ⭐ 비율 고정 */
+
+    background: url(../img/business/business_bg.png) no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.close-popup {
+position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0px 10px 3px 10px;
+    font-size: 22px;
+}
+
+.business-wrap {
+    font-family: Paperlogy;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+        transform: translate(-20%, -120%);
+    min-width: 350px;
+    text-align: left;
+    font-size: 22px;
+}
+
+.business-text {
+    padding-bottom:5px
+}
+
+.business-impact {
+    color: #004aab;
 }
