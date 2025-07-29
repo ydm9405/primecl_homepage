@@ -400,14 +400,14 @@ main {
     color: #fff;
     padding: 10px 30px;
     border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
     cursor: pointer;
     border: none;
     position: absolute;
     top: 65%;
     left: 50%;
     transform: translateX(-50%);
+    font-family: 'Paperlogy';
+    font-weight: 500;
 }
 
 .companyWrap.hidden-until-loaded {
