@@ -358,12 +358,8 @@ function setCompanyPage() {
             <img class="companyBanner" src="./common/img/company/banner_03.png"/>
           </div>
           <div class="banner_04" id="banner_04">
-            <div class="certWrap">
-              <h3 class="certTitle">인증서 영역</h3>
-              <div class="cert-section">
+            <img class="companyBanner" src="./common/img/company/banner_04.png"/>
                 <button id="openCertPopup" class="cert-btn">인증서 보기</button>
-              </div>
-            </div>
           </div>
         </div>
       </section>

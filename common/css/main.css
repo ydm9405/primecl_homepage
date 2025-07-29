@@ -399,15 +399,23 @@ main {
     background: #253485;
     color: #fff;
     padding: 10px 30px;
-    border-radius: 7px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     border: none;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .companyWrap.hidden-until-loaded {
     visibility: hidden;
+}
+
+.companyWrap .banner_04 {
+    position: relative;
 }
 
 .contents-creation {
@@ -492,11 +500,11 @@ main {
 
 .cert-close-btn {
     position: absolute;
-    top: -40px;
-    right: 0;
+    top: -80px;
+    right: -90px;
     background: none;
     border: none;
-    font-size: 30px;
+    font-size: 60px;
     color: white;
     cursor: pointer;
 }
