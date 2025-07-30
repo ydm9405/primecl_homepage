@@ -1,46 +1,46 @@
 function setHeader() {
   const headerHTML = `
     <header class="site-header">
-        <div class="logo">
-          <a href="#" id="logoLink">
-            <img class="logo_img" src="./common/img/header/logo_eng.png" alt="로고 이미지">
-          </a>
-        </div>
-        <nav class="main-nav">
-          <ul class="menu-list">
-            <li class="menu-item">
-              <span>회사 소개</span>
-            </li>`
-    //공공, 대학 사업 보류
-    //<li class="menu-item">
-    //  <span>Service</span>
-    //</li>
-    + `
-            <li class="menu-item">
-              <span>자체 과정</span>
-            </li>
-            <li class="menu-item">
-              <span>스튜디오</span>
-            </li>
-            <li class="menu-item">
-              <span>오시는 길</span>
-            </li>
-          </ul>
-        </nav>
-        <div class="contact-btn">
-          <button id="openContactPopup">사업 문의</button>
-        </div>
-      </header>
-      <div class="contact-popup" id="contactPopup">
-        <div class="popup-content">
-          <button class="close-popup" id="closeContactPopup">&times;</button>
-          <div class="business-wrap">
-            <p class= "business-text">콘텐츠 개발: <span class="business-impact">louis63@primecl.co.kr</span></p>
-            <p class= "business-text">자체과정 도입: <span class="business-impact">wendy3464@primecl.co.kr</span></p>
-          </div>
+      <div class="logo">
+        <a href="#" id="logoLink">
+          <img class="logo_img" src="./common/img/header/logo_eng.png" alt="로고 이미지">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <span>회사 소개</span>
+          </li>`
+          //공공, 대학 사업 보류
+          //<li class="menu-item">
+          //  <span>Service</span>
+          //</li>
+          + `
+          <li class="menu-item">
+            <span>자체 과정</span>
+          </li>
+          <li class="menu-item">
+            <span>스튜디오</span>
+          </li>
+          <li class="menu-item">
+            <span>오시는 길</span>
+          </li>
+        </ul>
+      </nav>
+      <div class="contact-btn">
+        <button id="openContactPopup">사업 문의</button>
+      </div>
+    </header>
+    <div class="contact-popup" id="contactPopup">
+      <div class="popup-content">
+        <button class="close-popup" id="closeContactPopup">&times;</button>
+        <div class="business-wrap">
+          <p class= "business-text">콘텐츠 개발: <span class="business-impact">louis63@primecl.co.kr</span></p>
+          <p class= "business-text">자체과정 도입: <span class="business-impact">wendy3464@primecl.co.kr</span></p>
         </div>
       </div>
-    `;
+    </div>
+  `;
 
   document.body.insertAdjacentHTML("beforeend", headerHTML);
 

@@ -632,30 +632,29 @@ function setContentsCreationPage() {
       <img class="companyBanner_main" src="./common/img/company/banner_main.png">
       <section class="contents-creation">
           <div class="categoryWrap">
-          
-        <h2 class="mainTitle">
-          <span class="sub_title">Contents Creation</span></br>
-          자체과정 콘텐츠 부문
-          <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="메인타이틀이미지">
-        </h2>
-        ${contentsCategory
-      .map((cat) => {
-        const cardsHTML = generateCourseCards(contentsData[cat.key] || [], cat.key);
-        const hasMore = (contentsData[cat.key] || []).length > 6;
-
-        return `
-            <div class="category fade-up" id="category-${cat.key}">
-              <h3>
-                <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
-                ${cat.name}
-                <div class="line"></div>
-              </h3>
-              <div class="card-grid">${cardsHTML}</div>
-              ${hasMore ? `<div class="more-wrap"><button class="more-btn" data-target="${cat.key}">더보기</button></div>` : ""}
-            </div>
-        `;
-      })
-      .join("")}
+            <h2 class="mainTitle">
+              <span class="sub_title">Contents Creation</span></br>
+              자체과정 콘텐츠 부문
+              <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="메인타이틀이미지">
+            </h2>
+            ${contentsCategory
+              .map((cat) => {
+                const cardsHTML = generateCourseCards(contentsData[cat.key] || [], cat.key);
+                const hasMore = (contentsData[cat.key] || []).length > 6;
+                
+                return `
+                    <div class="category fade-up" id="category-${cat.key}">
+                      <h3>
+                        <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
+                        ${cat.name}
+                        <div class="line"></div>
+                      </h3>
+                      <div class="card-grid">${cardsHTML}</div>
+                      ${hasMore ? `<div class="more-wrap"><button class="more-btn" data-target="${cat.key}">더보기</button></div>` : ""}
+                    </div>
+                `;
+              })
+            .join("")}
           </div>
       </section>
     </main>
@@ -762,7 +761,7 @@ function setContentsCreationPage() {
 function setContentsStudioPage() {
   console.log("setContentsStudioPage 호출됨")
   const html = `
-<main>
+    <main>
       <nav class="category-nav">
         <ul class="timeline">
           <li class="active"><a href="#banner_01">스튜디오 A</a></li>
@@ -782,17 +781,17 @@ function setContentsStudioPage() {
             <img class="studioBanner" src="./common/img/studio/banner_01.png"/>
           </div>
           <div class="banner_02" id="banner_02">
-          <h2 class="studioTitle">
-            스튜디오 B
-            <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
-          </h2>
+            <h2 class="studioTitle">
+              스튜디오 B
+              <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
+            </h2>
             <img class="studioBanner" src="./common/img/studio/banner_02.png"/>
           </div>
           <div class="banner_03" id="banner_03">
-          <h2 class="studioTitle">
-            스튜디오 C
-            <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
-          </h2>
+            <h2 class="studioTitle">
+              스튜디오 C
+              <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="타이틀이미지">
+            </h2>
             <img class="studioBanner" src="./common/img/studio/banner_03.png"/>
           </div>
         </div>
