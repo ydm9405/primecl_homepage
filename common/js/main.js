@@ -455,22 +455,22 @@ function openCertPopup() {
         <button class="cert-close-btn">&times;</button>
         <div class="cert-carousel">
           ${Array.from({ length: 15 }, (_, i) => {
-    const index = i + 1;
-    return `<img src="./common/img/cert/cert_${String(index).padStart(2, '0')}.png" class="cert-slide" data-index="${index}">`;
-  }).join('')}
+            const index = i + 1;
+            return `<img src="./common/img/cert/cert_${String(index).padStart(2, '0')}.png" class="cert-slide" data-index="${index}">`;
+          }).join('')}
         </div>
         <div class="cert-thumbnail-wrapper">
           <button class="thumb-nav prev">&lt;</button>
           <div class="cert-thumbnail-row">
             ${Array.from({ length: 15 }, (_, i) => {
-    const index = i + 1;
-    return `
+              const index = i + 1;
+              return `
                 <div class="thumb-box" data-index="${index}">
                   <img src="./common/img/cert/cert_${String(index).padStart(2, '0')}.png" class="cert-thumb" data-index="${index}">
                   <div class="thumb-label">${index}</div>
                 </div>
               `;
-  }).join('')}
+            }).join('')}
           </div>
           <button class="thumb-nav next">&gt;</button>
         </div>
