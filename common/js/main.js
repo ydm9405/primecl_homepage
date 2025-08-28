@@ -59,6 +59,12 @@ const contentsData = {
       materialLink: "./common/down/millennial.pdf",
       previewLink: "https://player.vimeo.com/video/1099881049"
     },
+    {
+      title: "[연결과 변화] 우리는 지금 칭기즈칸처럼",
+      image: "./common/img/contentsCreation/genghisKhan.png",
+      materialLink: "./common/down/genghisKhan.pdf",
+      previewLink: "https://player.vimeo.com/video/1113780210"
+    },
   ],
   //IT
   it: [
@@ -128,6 +134,12 @@ const contentsData = {
       materialLink: "./common/down/kafka.pdf",
       previewLink: "https://player.vimeo.com/video/1105033623"
     },
+    {
+      title: "누구나 쉽게 배우는 MariaDB 기초 및 활용",
+      image: "./common/img/contentsCreation/mariaDB.png",
+      materialLink: "./common/down/mariaDB.pdf",
+      previewLink: "https://player.vimeo.com/video/1113780169"
+    },
   ],
   //업무관리
   workManagement: [
@@ -160,6 +172,12 @@ const contentsData = {
       image: "./common/img/contentsCreation/onboarding.png",
       materialLink: "./common/down/onboarding.pdf",
       previewLink: "https://player.vimeo.com/video/1099881458"
+    },
+    {
+      title: "AI 마케터 시대, 생성형 AI와 팀플레이하기",
+      image: "./common/img/contentsCreation/AImarketing.png",
+      materialLink: "./common/down/AImarketing.pdf",
+      previewLink: "https://player.vimeo.com/video/"
     },
   ],
   //인문교양
@@ -226,6 +244,12 @@ const contentsData = {
       image: "./common/img/contentsCreation/mentoring.png",
       materialLink: "./common/down/mentoring.pdf",
       previewLink: "https://player.vimeo.com/video/1099881613"
+    },
+    {
+      title: "윤수빈 작가의 ‘조직을 바꾸는 말 한마디의 힘’",
+      image: "./common/img/contentsCreation/powerofspeech.png",
+      materialLink: "./common/down/powerofspeech.pdf",
+      previewLink: "https://player.vimeo.com/video/1113780299"
     },
   ],
 };
