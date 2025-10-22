@@ -683,6 +683,7 @@ function setContentsCreationPage() {
       </section>
       <div style="display: none;">
         <a href="./common/kolon/01/01_01.html">코오롱 1차시</a>
+        <a href="./common/kolon/02/01_01.html">코오롱 2차시</a>
       </div>
     </main>
   `;
