@@ -1,0 +1,81 @@
+.oath-wrap {
+    position: absolute;
+    width: 100%;
+    max-width: 1280px;
+    height: 720px;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.oath-inner {
+    width: 100%;
+}
+
+.oath-fields {
+    position: absolute;
+    width: 980px;
+    bottom: -675px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.oath-fields label {
+    font-family: Paperlogy-8ExtraBold;
+    display: inline-block;
+    font-size: 22px;
+    background-color: white;
+    border-radius: 26px;
+    padding: 5px 20px;
+    margin: 0px 8px;
+}
+
+.oath-fields input {
+    width: 200px;
+    border: none;
+    font-size: 20px;
+    position: relative;
+    top: -3px;
+}
+
+.oath-wrap {
+    scrollbar-width: thin;
+    scrollbar-color: #c9a14a #f3e5c0;
+    /* thumb / track */
+}
+
+/* WebKit 브라우저용 */
+.oath-wrap::-webkit-scrollbar {
+    width: 10px;
+}
+
+.oath-wrap::-webkit-scrollbar-track {
+    background: #f3e5c0;
+    /* 밝은 베이지, 배경 톤 */
+    border-radius: 8px;
+}
+
+.oath-wrap::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #d4af37, #b8860b);
+    /* 금색 계열 그라데이션 */
+    border-radius: 8px;
+    border: 2px solid #f3e5c0;
+}
+
+.oath-wrap::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #e1c16e, #a97400);
+}
+
+.ck_ok {
+    background: url(../../common/img/oathUI/submit.png) no-repeat;
+    background-size: 218px 56px;
+    width: 218px;
+    height: 56px;
+    position: absolute;
+    top: 255px;
+    left: 770px;
+    display: none;
+}
