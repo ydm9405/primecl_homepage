@@ -177,7 +177,7 @@ const contentsData = {
       title: "AI 마케터 시대, 생성형 AI와 팀플레이하기",
       image: "./common/img/contentsCreation/AImarketing.png",
       materialLink: "./common/down/AImarketing.pdf",
-      previewLink: "https://player.vimeo.com/video/"
+      previewLink: "https://player.vimeo.com/video/1115077151"
     },
   ],
   //인문교양
@@ -681,6 +681,9 @@ function setContentsCreationPage() {
             .join("")}
           </div>
       </section>
+      <div style="display: none;">
+        <a href="./common/kolon/01/01_01.html">코오롱 1차시</a>
+      </div>
     </main>
   `;
   hideMainPage();
