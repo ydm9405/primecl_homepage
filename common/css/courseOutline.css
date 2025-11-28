@@ -1,0 +1,201 @@
+.course-overview-page {
+    background: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.course-overview-wrap {
+    max-width: 1280px;
+    background: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 60px;
+    box-sizing: border-box;
+    transform: scale(0.7);
+    transform-origin: top center;
+    /* 축소 기준점을 위로 올리기 */
+}
+
+.page-title {
+    font-size: 26px;
+    font-family: NotoSansKR;
+    font-weight: 700;
+    border-bottom: 1px solid;
+    line-height: 60px;
+}
+
+.course-hero {
+    display: flex;
+    padding: 30px 30px;
+    gap: 70px;
+}
+
+.hero-image {
+    width: 580px;
+    flex: 0 0 580px;
+}
+
+.course-keyword {
+    font-family: 'NotoSansKR';
+    font-size: 26px;
+    font-weight: 900;
+    padding: 35px 0px;
+    word-break: keep-all;
+}
+
+.course-keyword .accent {
+    color: #f28d01
+}
+
+.course-description {
+    font-family: 'NotoSansKR';
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 25px;
+    word-break: keep-all;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.course-tabs {
+    font-family: 'NotoSansKR';
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tab-btn {
+    background: #ffffff;
+    border: 2px solid #f28d01;
+    color: #f28d01;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 300px;
+}
+
+/* 활성화된 탭 버튼 */
+.tab-btn.active {
+    background: #f28d01;
+    color: #fff;
+    border-color: #f28d01;
+}
+
+.bullet-icon {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background-image: url(../img/courseOutline/bullet.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-bottom: 2px;
+    color: transparent;
+}
+
+.info-title {
+    font-family: 'NotoSansKR';
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.info-section {
+    margin-top: 80px;
+    padding-left: 60px;
+}
+
+.info-list {
+    font-family: 'NotoSansKR';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.info-list li {
+    line-height: 28px;
+    margin-bottom: 18px;
+}
+
+.small {
+    font-size: 18px;
+    font-weight: 500;
+    word-break: keep-all;
+    text-indent: 0px;
+    margin-left: 25px;
+}
+
+.teacher-wrap {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    font-family: 'NotoSansKR';
+    padding: 0px 36px;
+}
+
+.teacher-photo {
+    flex-shrink: 0;
+}
+
+.teacher-photo img {
+    width: 270px;
+    border-radius: 10px;
+}
+
+
+/* ======================
+    02. 참고 도서
+====================== */
+.book-wrap {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+    font-family: 'NotoSansKR';
+    padding: 0px 36px;
+}
+
+.book-images {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 20px;
+}
+
+.book-images img {
+    width: 270px;
+    border-radius: 10px;
+}
+
+.teacher-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    /* 왼쪽 90px, 오른쪽 나머지 */
+    column-gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+/* 왼쪽 라벨 */
+.teacherBook {
+    font-size: 20px;
+    font-weight: 900;
+    text-align: right;
+    white-space: nowrap;
+    margin-bottom: 12px;
+}
+
+/* 오른쪽 텍스트 */
+.teacherBookText {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+}

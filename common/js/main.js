@@ -44,25 +44,25 @@ const contentsData = {
     {
       title: "일잘러의 멘탈관리 수업 - 회복탄력성",
       image: "./common/img/contentsCreation/resilience.png",
-      materialLink: "./common/down/resilience.pdf",
+      materialLink: "./common/courseOutline/resilience.html",
       previewLink: "https://player.vimeo.com/video/1099890425"
     },
     {
       title: "슬기로운 갈등 관리",
       image: "./common/img/contentsCreation/mediation.png",
-      materialLink: "./common/down/mediation.pdf",
+      materialLink: "./common/courseOutline/mediation.html",
       previewLink: "https://player.vimeo.com/video/1099883106"
     },
     {
       title: "개인과 조직의 성장을 이끄는 밀레니얼 워커십",
       image: "./common/img/contentsCreation/millennial.png",
-      materialLink: "./common/down/millennial.pdf",
+      materialLink: "./common/courseOutline/millennial.html",
       previewLink: "https://player.vimeo.com/video/1099881049"
     },
     {
       title: "[연결과 변화] 우리는 지금 칭기즈칸처럼",
       image: "./common/img/contentsCreation/genghisKhan.png",
-      materialLink: "./common/down/genghisKhan.pdf",
+      materialLink: "./common/courseOutline/genghisKhan.html",
       previewLink: "https://player.vimeo.com/video/1113780210"
     },
   ],
@@ -71,73 +71,73 @@ const contentsData = {
     {
       title: "처음 배우는 생성형AI 프로그램개발(LLM)",
       image: "./common/img/contentsCreation/LLM.png",
-      materialLink: "./common/down/LLM.pdf",
+      materialLink: "./common/courseOutline/LLM.html",
       previewLink: "https://player.vimeo.com/video/1099891617"
     },
     {
       title: "처음 배우는 쿠버네티스 개발 전략",
       image: "./common/img/contentsCreation/kubernetes.png",
-      materialLink: "./common/down/kubernetes.pdf",
+      materialLink: "./common/courseOutline/kubernetes.html",
       previewLink: "https://player.vimeo.com/video/1099891525"
     },
     {
       title: "처음 배우는 리액트",
       image: "./common/img/contentsCreation/react.png",
-      materialLink: "./common/down/react.pdf",
+      materialLink: "./common/courseOutline/react.html",
       previewLink: "https://player.vimeo.com/video/1099891551"
     },
     {
       title: "전혀 다른 생성형 AI",
       image: "./common/img/contentsCreation/ai.png",
-      materialLink: "./common/down/ai.pdf",
+      materialLink: "./common/courseOutline/ai.html",
       previewLink: "https://player.vimeo.com/video/1099891176"
     },
     {
       title: "처음 배우는 클린코드 With 파이썬",
       image: "./common/img/contentsCreation/cleanCode.png",
-      materialLink: "./common/down/cleanCode.pdf",
+      materialLink: "./common/courseOutline/cleanCode.html",
       previewLink: "https://player.vimeo.com/video/1099882971"
     },
     {
       title: "AI시대, 일잘러를 위한 데이터 사고와 분석법",
       image: "./common/img/contentsCreation/data.png",
-      materialLink: "./common/down/data.pdf",
+      materialLink: "./common/courseOutline/data.html",
       previewLink: "https://player.vimeo.com/video/1099882017"
     },
     {
       title: "챗 GPT로 만드는 주식&<br>암호화폐 자동매매 시스템",
       image: "./common/img/contentsCreation/cryptocurrency.png",
-      materialLink: "./common/down/cryptocurrency.pdf",
+      materialLink: "./common/courseOutline/cryptocurrency.html",
       previewLink: "https://player.vimeo.com/video/1099882133"
     },
     {
       title: "누구나 쉽게 배우는 도커 기초 및 활용법",
       image: "./common/img/contentsCreation/docker.png",
-      materialLink: "./common/down/docker.pdf",
+      materialLink: "./common/courseOutline/docker.html",
       previewLink: "https://player.vimeo.com/video/1099882852"
     },
     {
       title: "모두를 위한 AI 데이터 시각화 수업",
       image: "./common/img/contentsCreation/dataVisualization.png",
-      materialLink: "./common/down/dataVisualization.pdf",
+      materialLink: "./common/courseOutline/dataVisualization.html",
       previewLink: "https://player.vimeo.com/video/1104024205"
     },
     {
       title: "누구나 쉽게 배우는 NoSQL-Mongo DB",
       image: "./common/img/contentsCreation/mongoDB.png",
-      materialLink: "./common/down/mongoDB.pdf",
+      materialLink: "./common/courseOutline/mongoDB.html",
       previewLink: "https://player.vimeo.com/video/1104024302"
     },
     {
       title: "처음 배우는 카프카",
       image: "./common/img/contentsCreation/kafka.png",
-      materialLink: "./common/down/kafka.pdf",
+      materialLink: "./common/courseOutline/kafka.html",
       previewLink: "https://player.vimeo.com/video/1105033623"
     },
     {
       title: "누구나 쉽게 배우는 MariaDB 기초 및 활용",
       image: "./common/img/contentsCreation/mariaDB.png",
-      materialLink: "./common/down/mariaDB.pdf",
+      materialLink: "./common/courseOutline/mariaDB.html",
       previewLink: "https://player.vimeo.com/video/1113780169"
     },
   ],
@@ -146,37 +146,37 @@ const contentsData = {
     {
       title: "10분만에 AI 활용법",
       image: "./common/img/contentsCreation/aiQuickstart.png",
-      materialLink: "./common/down/aiQuickstart.pdf",
+      materialLink: "./common/courseOutline/aiQuickstart.html",
       previewLink: "https://player.vimeo.com/video/1099882065"
     },
     {
       title: "스마트 워크로 워크 스마트하기",
       image: "./common/img/contentsCreation/smartWork.png",
-      materialLink: "./common/down/smartWork.pdf",
+      materialLink: "./common/courseOutline/smartWork.html",
       previewLink: "https://player.vimeo.com/video/1099882304"
     },
     {
       title: "일잘러의 창의적 문제 해결 방법",
       image: "./common/img/contentsCreation/creativity.png",
-      materialLink: "./common/down/creativity.pdf",
+      materialLink: "./common/courseOutline/creativity.html",
       previewLink: "https://player.vimeo.com/video/1099883069"
     },
     {
       title: "일잘러의 비즈니스 매너",
       image: "./common/img/contentsCreation/etiquette.png",
-      materialLink: "./common/down/etiquette.pdf",
+      materialLink: "./common/courseOutline/etiquette.html",
       previewLink: "https://player.vimeo.com/video/1099880723"
     },
     {
       title: "신규 입사자의 온보딩 과정,<br>워(Work).플(People).킹(Networking)",
       image: "./common/img/contentsCreation/onboarding.png",
-      materialLink: "./common/down/onboarding.pdf",
+      materialLink: "./common/courseOutline/onboarding.html",
       previewLink: "https://player.vimeo.com/video/1099881458"
     },
     {
       title: "AI 마케터 시대, 생성형 AI와 팀플레이하기",
       image: "./common/img/contentsCreation/AImarketing.png",
-      materialLink: "./common/down/AImarketing.pdf",
+      materialLink: "./common/courseOutline/AImarketing.html",
       previewLink: "https://player.vimeo.com/video/1115077151"
     },
   ],
@@ -185,31 +185,31 @@ const contentsData = {
     {
       title: "명욱교수와 함께 떠나는 술기로운 세계사",
       image: "./common/img/contentsCreation/boozehistory.png",
-      materialLink: "./common/down/boozehistory.pdf",
+      materialLink: "./common/courseOutline/boozehistory.html",
       previewLink: "https://player.vimeo.com/video/1099891577"
     },
     {
       title: "직장인을 위한 인생 특강 - 니체",
       image: "./common/img/contentsCreation/nietzsche.png",
-      materialLink: "./common/down/nietzsche.pdf",
+      materialLink: "./common/courseOutline/nietzsche.html",
       previewLink: "https://player.vimeo.com/video/1099891647"
     },
     {
       title: "직장인을 위한 인생 수업 - 그리스로마신화",
       image: "./common/img/contentsCreation/mythology.png",
-      materialLink: "./common/down/mythology.pdf",
+      materialLink: "./common/courseOutline/mythology.html",
       previewLink: "https://player.vimeo.com/video/1099882040"
     },
     {
       title: "승리하는 사람들의 인생 바이블, 손자병법",
       image: "./common/img/contentsCreation/strategy.png",
-      materialLink: "./common/down/strategy.pdf",
+      materialLink: "./common/courseOutline/strategy.html",
       previewLink: "https://player.vimeo.com/video/1099881210"
     },
     {
       title: "직장인을 위한 인생 특강 - 한비자",
       image: "./common/img/contentsCreation/hanfei.png",
-      materialLink: "./common/down/hanfei.pdf",
+      materialLink: "./common/courseOutline/hanfei.html",
       previewLink: "https://player.vimeo.com/video/1099880864"
     },
   ],
@@ -218,13 +218,13 @@ const contentsData = {
     {
       title: "일잘러의 생각정리 기술-비주얼씽킹&마인드맵",
       image: "./common/img/contentsCreation/visual.png",
-      materialLink: "./common/down/visual.pdf",
+      materialLink: "./common/courseOutline/visual.html",
       previewLink: "https://player.vimeo.com/video/1099891485"
     },
     {
       title: "일잘러를 위한 Reading & Writing 기술",
       image: "./common/img/contentsCreation/reading.png",
-      materialLink: "./common/down/reading.pdf",
+      materialLink: "./common/courseOutline/reading.html",
       previewLink: "https://player.vimeo.com/video/1099891347"
     },
   ],
@@ -233,7 +233,7 @@ const contentsData = {
     {
       title: "일잘러들의 성공 키워드 - 행동력 수업",
       image: "./common/img/contentsCreation/agency.png",
-      materialLink: "./common/down/agency.pdf",
+      materialLink: "./common/courseOutline/agency.html",
       previewLink: "https://player.vimeo.com/video/1099890601"
     },
   ],
@@ -242,13 +242,13 @@ const contentsData = {
     {
       title: "개인과 조직의 성장을 이끄는 힘, 멘토링 바이블",
       image: "./common/img/contentsCreation/mentoring.png",
-      materialLink: "./common/down/mentoring.pdf",
+      materialLink: "./common/courseOutline/mentoring.html",
       previewLink: "https://player.vimeo.com/video/1099881613"
     },
     {
       title: "윤수빈 작가의 ‘조직을 바꾸는 말 한마디의 힘’",
       image: "./common/img/contentsCreation/powerofspeech.png",
-      materialLink: "./common/down/powerofspeech.pdf",
+      materialLink: "./common/courseOutline/powerofspeech.html",
       previewLink: "https://player.vimeo.com/video/1113780299"
     },
   ],
@@ -479,22 +479,22 @@ function openCertPopup() {
         <button class="cert-close-btn">&times;</button>
         <div class="cert-carousel">
           ${Array.from({ length: 15 }, (_, i) => {
-            const index = i + 1;
-            return `<img src="./common/img/cert/cert_${String(index).padStart(2, '0')}.png" class="cert-slide" data-index="${index}">`;
-          }).join('')}
+    const index = i + 1;
+    return `<img src="./common/img/cert/cert_${String(index).padStart(2, '0')}.png" class="cert-slide" data-index="${index}">`;
+  }).join('')}
         </div>
         <div class="cert-thumbnail-wrapper">
           <button class="thumb-nav prev">&lt;</button>
           <div class="cert-thumbnail-row">
             ${Array.from({ length: 15 }, (_, i) => {
-              const index = i + 1;
-              return `
+    const index = i + 1;
+    return `
                 <div class="thumb-box" data-index="${index}">
                   <img src="./common/img/cert/cert_${String(index).padStart(2, '0')}.png" class="cert-thumb" data-index="${index}">
                   <div class="thumb-label">${index}</div>
                 </div>
               `;
-            }).join('')}
+  }).join('')}
           </div>
           <button class="thumb-nav next">&gt;</button>
         </div>
@@ -662,11 +662,11 @@ function setContentsCreationPage() {
               <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="메인타이틀이미지">
             </h2>
             ${contentsCategory
-              .map((cat) => {
-                const cardsHTML = generateCourseCards(contentsData[cat.key] || [], cat.key);
-                const hasMore = (contentsData[cat.key] || []).length > 6;
-                
-                return `
+      .map((cat) => {
+        const cardsHTML = generateCourseCards(contentsData[cat.key] || [], cat.key);
+        const hasMore = (contentsData[cat.key] || []).length > 6;
+
+        return `
                     <div class="category fade-up" id="category-${cat.key}">
                       <h3>
                         <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
@@ -677,8 +677,8 @@ function setContentsCreationPage() {
                       ${hasMore ? `<div class="more-wrap"><button class="more-btn" data-target="${cat.key}">더보기</button></div>` : ""}
                     </div>
                 `;
-              })
-            .join("")}
+      })
+      .join("")}
           </div>
       </section>
       <div style="display: none;">
@@ -766,12 +766,33 @@ function setContentsCreationPage() {
   observeFadeUp();
 
   // 🍀 콘텐츠 생성 페이지 로딩 완료 후 추가
-  document.querySelectorAll(".course-card .title_wrap").forEach(el => {
-    el.addEventListener("click", () => {
-      const card = el.closest(".course-card");
+
+
+  // 2) [영상 보기] 버튼 클릭 시 → 썸네일 클릭과 동일하게 영상 모달 오픈
+  document.querySelectorAll(".course-card .btn-preview-video").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // 부모(.title_wrap) 클릭 이벤트 막기
+      const card = btn.closest(".course-card");
       const link = card?.dataset?.preview;
       if (link) {
         openPreviewModal(link);
+      }
+    });
+  });
+
+  // 3) [과정소개서 보기] 버튼 클릭 시 → 새 창(팝업)으로 HTML/PDF 열기
+  document.querySelectorAll(".course-card .btn-preview-material").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // 썸네일 클릭 이벤트로 전파 방지
+      const card = btn.closest(".course-card");
+      const material = card?.dataset?.material;
+
+      if (material && material !== "undefined" && material !== "#") {
+        window.open(
+          material,
+          "courseMaterial",
+          "width=1200,height=800,scrollbars=yes"
+        );
       }
     });
   });
@@ -891,12 +912,18 @@ function generateCourseCards(dataList, categoryKey) {
     .map((item, index) => {
 
       return `
-        <div class="course-card ${index >= 8 ? 'hidden' : ''}" data-category="${categoryKey}" data-preview="${item.previewLink}">
+        <div class="course-card ${index >= 8 ? 'hidden' : ''}" 
+             data-category="${categoryKey}" 
+             data-preview="${item.previewLink}"
+             data-material="${item.materialLink}">
           <div class="title_wrap">
             <img src="${item.image}" alt="썸네일" />
             <p class="course-title">${item.title}</p>
             <div class="preview-overlay">
-              <span class="preview-text"></span>
+              <div class="preview-buttons">
+                <button type="button" class="btn-preview-video">영상 보기</button>
+                <button type="button" class="btn-preview-material">과정소개서 보기</button>
+              </div>
             </div>
           </div>
         </div>
