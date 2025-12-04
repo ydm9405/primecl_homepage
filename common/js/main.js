@@ -791,7 +791,7 @@ function setContentsCreationPage() {
         window.open(
           material,
           "courseMaterial",
-          "width=1200,height=800,scrollbars=yes"
+          "width=1400,height=900,scrollbars=yes"
         );
       }
     });
