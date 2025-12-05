@@ -791,7 +791,7 @@ function setContentsCreationPage() {
         window.open(
           material,
           "courseMaterial",
-          "width=1400,height=900,scrollbars=yes"
+          `width=${window.screen.availWidth},height=${window.screen.availHeight},left=0,top=0`
         );
       }
     });
