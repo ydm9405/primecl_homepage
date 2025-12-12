@@ -70,7 +70,7 @@ font-family: 'pretendard';
     display: flex;
     align-items: flex-start;
     font-family: 'pretendard';
-    font-weight: 500;
+    font-weight: 700;
     font-size: 22px;
     color: #253485;
     margin-left: 45px;
@@ -78,7 +78,7 @@ font-family: 'pretendard';
 }
 
 .category h3 .line {
-    flex-grow: 0.9;
+    flex-grow: 0.96;
     height: 4px;
     background-color: #e0e0e0;
     margin-top: 14px;
@@ -104,7 +104,36 @@ font-family: 'pretendard';
     margin: 0 auto;
     margin-bottom: 60px;
 }
+.course-card .title_wrap {
+  position: relative;
+}
 
+.course-card .title_wrap .img-mask-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-card .title_wrap .img-mask-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity .3s ease;
+  pointer-events: none;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.course-card .title_wrap:hover .img-mask-wrap::after {
+  opacity: 1;
+}
+
+.course-card .title_wrap img {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
 /* 오버레이 기본 숨김 */
 .course-card .preview-overlay {
     position: absolute;
@@ -115,6 +144,7 @@ font-family: 'pretendard';
     opacity: 0;
     transition: opacity .3s;
     top: 90px;
+    z-index: 2;
     /* 기존에 쓰던 배경/색 지정 그대로 유지 */
 }
 
@@ -123,6 +153,7 @@ font-family: 'pretendard';
 }
 
 .preview-buttons {
+    font-family: 'pretendard';
     display: flex;
     gap: 15px;
 }
@@ -130,16 +161,12 @@ font-family: 'pretendard';
 .preview-buttons button {
     border: none;
     border-radius: 24px;
-    background: rgba(248, 189, 40, 0.8);
+    background: rgba(248, 189, 40, 1);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     width: 130px;
     height: 30px;
-}
-
-.preview-buttons button:hover {
-    background: rgba(248, 189, 40, 1);
 }
 
 /* 텍스트 스타일 */
@@ -168,7 +195,7 @@ font-family: 'pretendard';
 }
 
 .course-title {
-    font-family: 'Paperlogy';
+    font-family: 'pretendard';
     font-weight: 800;
     font-size: 18px;
     height: 60px;

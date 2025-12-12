@@ -659,11 +659,11 @@ function setContentsCreationPage() {
       .map((cat) => {
         const cardsHTML = generateCourseCards(contentsData[cat.key] || [], cat.key);
         const hasMore = (contentsData[cat.key] || []).length > 6;
-
+        //아이콘 필요할 경우 <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘"> 부분 추가
         return `
                     <div class="category fade-up" id="category-${cat.key}">
                       <h3>
-                        <img src="${cat.icon}" class="icon" alt="${cat.name} 아이콘">
+                        
                         ${cat.name}
                         <div class="line"></div>
                       </h3>
@@ -912,7 +912,9 @@ function generateCourseCards(dataList, categoryKey) {
              data-preview="${item.previewLink}"
              data-material="${item.materialLink}">
           <div class="title_wrap">
-            <img src="${item.image}" alt="썸네일" />
+            <div class="img-mask-wrap">
+              <img src="${item.image}" alt="썸네일" />
+            </div>
             <p class="course-title">${item.title}</p>
             <div class="preview-overlay">
               <div class="preview-buttons">
