@@ -27,7 +27,7 @@ body:not(.loaded) .site-header {
     align-items: center;
     /* justify-content: space-between; */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 30px 80px 30px 50px;
+    padding: 21px 30px 21px 30px;
 }
 
 .map-popup {
@@ -79,10 +79,10 @@ body:not(.loaded) .site-header {
 
 .menu-item>span {
     display: block;
-    font-family: 'Paperlogy';
-    font-weight: 600;
-    font-size: 21px;
-    color: #253485;
+    font-family: 'pretendard';
+    font-weight: 900;
+    font-size: 18px;
+    color: #2e2d2d;
     padding: 0px 20px;
     border-radius: 3px 3px 0 0;
 }
@@ -90,7 +90,7 @@ body:not(.loaded) .site-header {
 .menu-item span::after {
     content: '';
     position: absolute;
-    bottom: -34px;
+    bottom: -25px;
     left: 50%;
     transform: translateX(-50%) scaleX(0);
     transform-origin: center;
@@ -101,11 +101,11 @@ body:not(.loaded) .site-header {
 }
 
 .menu-item.active span::after {
-    transform: translate(-50%, -25px) scaleX(1);
+    transform: translate(-50%, -15px) scaleX(1);
 }
 
 .menu-item span:hover::after {
-    transform: translate(-50%, -25px) scaleX(1);
+    transform: translate(-50%, -15px) scaleX(1);
 }
 
 .contact-btn button {
@@ -123,7 +123,7 @@ body:not(.loaded) .site-header {
 }
 
 .logo_img {
-    min-width: 172px;
+    min-width: 153px;
 }
 
 .mapWrap {
@@ -145,7 +145,7 @@ body:not(.loaded) .site-header {
 }
 
 .main-nav {
-    margin-left: 70px;
+    margin-left: 50px;
     display: flex;
     justify-content: space-between;
     width: 1450px;
@@ -156,16 +156,16 @@ body:not(.loaded) .site-header {
 }
 
 .contact-btn button {
-    font-family: Paperlogy;
+    font-family: 'pretendard';
     font-weight: 500;
     font-size: 18px;
-    padding: 5px 5px;
+    padding: 3px 5px;
     border: 2px solid #13256b;
     background: #253485;
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
-    width: 110px;
+    width: 95px;
 }
 
 .contact-popup {

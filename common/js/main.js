@@ -3,37 +3,37 @@ const contentsCategory = [
   {
     key: "leadership",
     name: "리더십",
-    icon: "./common/img/contentsCreation/icon_leadership.png"
+    icon: "./common/img/contentsCreation/icon_common.png"
   },
   {
     key: "it",
     name: "IT",
-    icon: "./common/img/contentsCreation/icon_it.png"
+    icon: "./common/img/contentsCreation/icon_common.png"
   },
   {
     key: "workManagement",
     name: "업무관리",
-    icon: "./common/img/contentsCreation/icon_work.png"
+    icon: "./common/img/contentsCreation/icon_common.png"
   },
   {
     key: "liberalArts",
     name: "인문교양",
-    icon: "./common/img/contentsCreation/icon_liberal.png"
+    icon: "./common/img/contentsCreation/icon_common.png"
   },
   {
     key: "selfDevelopment",
     name: "자기계발",
-    icon: "./common/img/contentsCreation/icon_selfdev.png"
+    icon: "./common/img/contentsCreation/icon_common.png"
   },
   {
     key: "selfManagement",
     name: "자기관리",
-    icon: "./common/img/contentsCreation/icon_selfmanage.png"
+    icon: "./common/img/contentsCreation/icon_common.png"
   },
   {
     key: "organizationalManagement",
     name: "조직관리",
-    icon: "./common/img/contentsCreation/icon_organization.png"
+    icon: "./common/img/contentsCreation/icon_common.png"
   }
 ];
 
@@ -270,7 +270,7 @@ function createMainVideoSection() {
 
   const section = document.createElement("section");
   section.id = "mainVideoWrapper";
-  section.style = "position: relative; width: 100vw; height: calc(100vh - 104px); overflow: hidden; cursor: pointer;";
+  section.style = "position: relative; width: 100vw; height: calc(100vh - 83px); overflow: hidden; cursor: pointer;";
   section.innerHTML = `
     <div id="mainLogoMotion" class="logo-motion"">
       <img src="./common/img/header/logo_icon.png" alt="회사 로고" />
@@ -367,6 +367,7 @@ function setCompanyPage() {
       <section>
         <img class="companyBanner_main" src="./common/img/company/banner_main.png">
         <div class="companyWrap">
+          <img class="logo_common" src="./common/img/header/logo_common.png" alt="logo 공통">
           <h2 class="companyTitle">
             <span class="sub_title">Company Info</span></br>
             회사 소개
@@ -374,17 +375,9 @@ function setCompanyPage() {
           </h2>
           <div class="banner_01" id="banner_01">
             <img class="companyBanner" src="./common/img/company/banner_01.png"/>
+            <button id="openCertPopup" class="cert-btn">인증서 보기</button>
           </div>
-          <div class="banner_02" id="banner_02">
-            <img class="companyBanner" src="./common/img/company/banner_02.png"/>
-          </div>
-          <div class="banner_03" id="banner_03">
-            <img class="companyBanner" src="./common/img/company/banner_03.png"/>
-          </div>
-          <div class="banner_04" id="banner_04">
-            <img class="companyBanner" src="./common/img/company/banner_04.png"/>
-                <button id="openCertPopup" class="cert-btn">인증서 보기</button>
-          </div>
+
         </div>
       </section>
     </main>
@@ -414,7 +407,7 @@ function setCompanyPage() {
 
     e.preventDefault();
 
-    const headerHeight = 104;
+    const headerHeight = 82;
     const id = target.getAttribute("href");
     const section = document.querySelector(id);
     if (!section) return;
@@ -433,7 +426,7 @@ function setCompanyPage() {
 
   // ✅ 스크롤 시 자동 active 표시
   window.addEventListener("scroll", function () {
-    const headerHeight = 104;
+    const headerHeight = 82;
     const sections = document.querySelectorAll("[id^='banner_']");
 
     let currentId = null;
@@ -604,12 +597,12 @@ function setContentsServicePage() {
 
 function setLocationPage() {
   console.log("setLocationPage 호출됨");
-
   const html = `
     <main>
       <section>
         <img class="companyBanner_main" src="./common/img/location/banner_main.png">
         <div class="locationWrap">
+          <img class="logo_common" src="./common/img/header/logo_common.png" alt="logo 공통">
           <h2 class="locationTitle">
             <span class="sub_title">Location</span></br>
             오시는 길
@@ -656,7 +649,8 @@ function setContentsCreationPage() {
       <img class="companyBanner_main" src="./common/img/company/banner_main.png">
       <section class="contents-creation">
           <div class="categoryWrap">
-            <h2 class="mainTitle">
+          <img class="logo_common" src="./common/img/header/logo_common.png" alt="logo 공통">
+          <h2 class="mainTitle">
               <span class="sub_title">Contents Creation</span></br>
               자체과정 콘텐츠 부문
               <img class="main-title-img" src="./common/img/contentsCreation/main-title-img.png" alt="메인타이틀이미지">
@@ -714,7 +708,7 @@ function setContentsCreationPage() {
 
     e.preventDefault();
 
-    const headerHeight = 104;
+    const headerHeight = 82;
     const id = target.getAttribute("href");
     const section = document.querySelector(id);
     if (!section) return;
@@ -733,7 +727,7 @@ function setContentsCreationPage() {
 
 
   window.addEventListener("scroll", function () {
-    const headerHeight = 104;
+    const headerHeight = 82;
     const sections = document.querySelectorAll("[id^='category-']");
 
     let currentId = null;
@@ -821,6 +815,7 @@ function setContentsStudioPage() {
       <section>
         <img class="studioBanner_main" src="./common/img/studio/banner_main.png">
         <div class="studioWrap">
+          <img class="logo_common" src="./common/img/header/logo_common.png" alt="logo 공통">
           <h2 class="studioTitle">
             <span class="sub_title">Studio Info</span></br>
             스튜디오 A
@@ -856,7 +851,7 @@ function setContentsStudioPage() {
 
     e.preventDefault();
 
-    const headerHeight = 104;
+    const headerHeight = 82;
     const id = target.getAttribute("href");
     const section = document.querySelector(id);
     if (!section) return;
@@ -875,7 +870,7 @@ function setContentsStudioPage() {
 
   // ✅ 스크롤 시 자동 active 표시
   window.addEventListener("scroll", function () {
-    const headerHeight = 104;
+    const headerHeight = 82;
     const sections = document.querySelectorAll("[id^='banner_']");
 
     let currentId = null;

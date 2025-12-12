@@ -1,55 +1,56 @@
 main {
-    padding-top: 104px;
+    padding-top: 83px;
 }
 
 .mainTitle {
-    font-family: 'Paperlogy';
+    font-family: 'pretendard';
     font-weight: 700;
-    font-size: clamp(18px, 2vw, 41px);
+    font-size: clamp(18px, 2vw, 22px);
     color: #253485;
     position: absolute;
-    margin-left: 7%;
-    margin-top: 5%;
+    margin-left: 120px;
+    margin-top: 130px;
     z-index: 1;
 }
 
 .companyTitle {
-    font-family: 'Paperlogy';
+    font-family: 'pretendard';
     font-weight: 700;
-    font-size: clamp(18px, 2vw, 41px);
+    font-size: clamp(18px, 2vw, 22px);
     color: #253485;
     position: absolute;
-    margin-left: 7%;
-    margin-top: 5%;
+    margin-left: 120px;
+    margin-top: 130px;
 }
 
 .serviceTitle {
-    font-family: 'Paperlogy';
+font-family: 'pretendard';
     font-weight: 700;
-    font-size: clamp(18px, 2vw, 41px);
+    font-size: clamp(18px, 2vw, 22px);
     color: #253485;
     position: absolute;
-    margin-left: 7%;
+    margin-left: 120px;
+    margin-top: 130px;
 }
 
 .studioTitle {
-    font-family: 'Paperlogy';
+font-family: 'pretendard';
     font-weight: 700;
-    font-size: clamp(18px, 2vw, 41px);
+    font-size: clamp(18px, 2vw, 22px);
     color: #253485;
     position: absolute;
-    margin-left: 7%;
-    margin-top: 5%;
+    margin-left: 120px;
+    margin-top: 130px;
 }
 
 .locationTitle {
-    font-family: 'Paperlogy';
+font-family: 'pretendard';
     font-weight: 700;
-    font-size: clamp(18px, 2vw, 41px);
+    font-size: clamp(18px, 2vw, 22px);
     color: #253485;
     position: absolute;
-    margin-left: 7%;
-    margin-top: 5%;
+    margin-left: 120px;
+    margin-top: 130px;
     z-index: 1;
 }
 
@@ -68,11 +69,11 @@ main {
     margin-bottom: 30px;
     display: flex;
     align-items: flex-start;
-    font-family: 'Paperlogy';
+    font-family: 'pretendard';
     font-weight: 500;
-    font-size: 34px;
+    font-size: 22px;
     color: #253485;
-    margin-left: 124px;
+    margin-left: 45px;
     gap: 10px;
 }
 
@@ -80,27 +81,26 @@ main {
     flex-grow: 0.9;
     height: 4px;
     background-color: #e0e0e0;
-    margin-top: 35px;
+    margin-top: 14px;
 }
 
 .category .icon {
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
+    width: 34px;
+    height: 33px;
+    margin-right: 5px;
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 0fr));
+    grid-template-columns: repeat(auto-fill, minmax(420px, 0fr));
     justify-content: center;
     margin: 0 auto;
-    padding: 0 5%;
 }
 
 .course-card {
     text-align: center;
-    width: 350px;
+    width: 380px;
     margin: 0 auto;
     margin-bottom: 60px;
 }
@@ -114,7 +114,7 @@ main {
     justify-content: center;
     opacity: 0;
     transition: opacity .3s;
-    top: -40px;
+    top: 90px;
     /* 기존에 쓰던 배경/색 지정 그대로 유지 */
 }
 
@@ -124,22 +124,22 @@ main {
 
 .preview-buttons {
     display: flex;
-    gap: 8px;
+    gap: 15px;
 }
 
 .preview-buttons button {
-    padding: 8px 14px;
     border: none;
-    border-radius: 4px;
-    background: rgba(0, 0, 0, 0.6);
+    border-radius: 24px;
+    background: rgba(248, 189, 40, 0.8);
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
-    width:150px;
+    width: 130px;
+    height: 30px;
 }
 
 .preview-buttons button:hover {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(248, 189, 40, 1);
 }
 
 /* 텍스트 스타일 */
@@ -199,6 +199,7 @@ main {
 }
 
 .category-nav {
+    display: none;
     position: fixed;
     top: 390px;
     left: 60px;
@@ -356,36 +357,32 @@ main {
 
 .companyWrap {
     position: relative;
-    padding: 0px 130px;
-    margin-top: -5.2%;
-    width: 100%
+    width: 1280px;
+    margin: 0 auto;
 }
 
 .serviceWrap {
     position: relative;
-    padding: 0px 130px;
-    margin-top: -5.2%;
-    width: 100%
+    width: 1280px;
+    margin: 0 auto;
 }
 
 .studioWrap {
     position: relative;
-    padding: 0px 130px;
-    margin-top: -5.2%;
-    width: 100%
+    width: 1280px;
+    margin: 0 auto;
 }
 
 .locationWrap {
     position: relative;
-    padding: 0px 130px;
-    margin-top: -5.2%;
-    width: 100%
+    width: 1280px;
+    margin: 0 auto;
 }
 
 .sub_title {
     font-family: 'Poppins';
-    font-weight: 700;
-    font-size: clamp(18px, 1.5vw, 30px);
+    font-weight: 500;
+    font-size: clamp(18px, 1.5vw, 18px);
     color: #2cb0f4;
 }
 
@@ -402,12 +399,12 @@ main {
 }
 
 #category-leadership {
-    padding-top: 18%;
+    padding-top: 22%;
 }
 
 .categoryWrap {
-    padding: 0px 130px;
-    margin-top: -5.2%;
+    width: 1280px;
+    margin: 0 auto;
 }
 
 .cert-section {
@@ -423,10 +420,10 @@ main {
     cursor: pointer;
     border: none;
     position: absolute;
-    top: 65%;
+    bottom: 12%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Paperlogy';
+    font-family: 'pretendard';
     font-weight: 500;
 }
 
@@ -602,8 +599,8 @@ main {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    padding: 0px 7%;
-    padding-top: 18%;
+    padding: 0px 10%;
+    padding-top: 22%;
     z-index: 0;
 }
 
@@ -639,5 +636,41 @@ main {
     align-items: center;
     font-weight: bold;
     font-size: 18px;
+    z-index: 1;
+}
+
+html.company-scroll,
+html.company-scroll body {
+    scroll-snap-type: y proximity;
+    /* ← 강제(mandatory) 말고 proximity */
+    scroll-padding-top: 83px;
+    /* 고정 헤더 높이만큼 보정 */
+}
+
+/* 배너 01~05만 '한 화면 단위 섹션'처럼 스냅 */
+html.company-scroll .companyWrap>[id^="banner_"] {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: calc(100vh - 83px);
+    /* 헤더(83px) 제외한 높이만큼 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 배너 이미지 정렬 */
+html.company-scroll .companyWrap .companyBanner {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo_common {
+    position: absolute;
+    left: 50%;
+    padding-top:60px;
+    transform: translateX(-50%);
     z-index: 1;
 }

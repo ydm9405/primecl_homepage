@@ -2,7 +2,7 @@
     width: 100%;
     background: #1c3d80;
     color: white;
-    padding: 50px 0px;
+    padding: 30px 0px;
 }
 
 .footer-inner {
@@ -11,6 +11,7 @@
 }
 
 .footer-title {
+    width:180px;
     margin-bottom: 40px;
     display: inline-block;
 }
@@ -18,14 +19,14 @@
 .footer-address {
     font-family: 'pretendard';
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footer-copy {
     color: #bbbbbb;
     font-family: 'Poppins';
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .scroll-top-btn {
