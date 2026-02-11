@@ -11,7 +11,7 @@ function renderBottomBanner() {
   footer.innerHTML = `
     <div class="footer-inner">
       <h2 class="footer-title"><img src="./common/img/bottom/bottom_logo.png"></h2>
-      <p class="footer-address">서울특별시 금천구 디지털로 178 퍼블릭가산 B동 1401호</p>
+      <p class="footer-address">서울특별시 금천구 벚꽃로 254 월드메르디앙1차, 912호</p>
       <p class="footer-copy">Copyright © ${yearText} PrimeContentsLab. ALL Rights Reserved.</p>
     </div>
     <button id="scrollTopBtn" class="scroll-top-btn"></button>
